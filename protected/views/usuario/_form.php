@@ -34,15 +34,15 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'created_at'); ?>
-		<?php echo $form->textField($model,'created_at'); ?>
-		<?php echo $form->error($model,'created_at'); ?>
+		<?php echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->textField($model,'username',array('size'=>40,'maxlength'=>40)); ?>
+		<?php echo $form->error($model,'username'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'last_login'); ?>
-		<?php echo $form->textField($model,'last_login'); ?>
-		<?php echo $form->error($model,'last_login'); ?>
+		<?php echo $form->labelEx($model,'password'); ?>
+		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>180)); ?>
+		<?php echo $form->error($model,'password'); ?>
 	</div>
 
 	<div class="row buttons">

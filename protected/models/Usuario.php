@@ -10,6 +10,8 @@
  * @property string $email
  * @property string $created_at
  * @property string $last_login
+ * @property string $username
+ * @property string $password
  *
  * The followings are the available model relations:
  * @property Bolsin[] $bolsins
@@ -42,12 +44,14 @@ class Usuario extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nombre, apellido', 'required'),
+			array('nombre, apellido, username, password', 'required'),
 			array('nombre, apellido, email', 'length', 'max'=>120),
+			array('username', 'length', 'max'=>40),
+			array('password', 'length', 'max'=>180),
 			array('created_at, last_login', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idUsuario, nombre, apellido, email, created_at, last_login', 'safe', 'on'=>'search'),
+			array('idUsuario, nombre, apellido, email, created_at, last_login, username, password', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -75,6 +79,8 @@ class Usuario extends CActiveRecord
 			'email' => 'Email',
 			'created_at' => 'Created At',
 			'last_login' => 'Last Login',
+			'username' => 'Username',
+			'password' => 'Password',
 		);
 	}
 
@@ -95,9 +101,28 @@ class Usuario extends CActiveRecord
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('created_at',$this->created_at,true);
 		$criteria->compare('last_login',$this->last_login,true);
+		$criteria->compare('username',$this->username,true);
+		$criteria->compare('password',$this->password,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
+
+	//FUNCION PARA LISTAR EL COMBO
+    public static function getList()
+    {
+        return CHtml::listData(Usuarios::model()->findAll(),'id_usuario', 'username');
+    }
+
+
+	public function validatePassword($password)
+    {
+    	return $this->hashPassword($password)===$this->password;
+    }
+
+  	public function hashPassword($password)
+  	{
+    	return $password;
+  	}
 }

@@ -1,0 +1,649 @@
+2013/08/18 15:37:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&view=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/contact
+---
+2013/08/18 15:37:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&view=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&view=usuario
+---
+2013/08/18 15:37:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&view=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&view=usuario
+---
+2013/08/18 15:37:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&view=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&view=usuario
+---
+2013/08/18 15:37:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&view=usuario
+---
+2013/08/18 15:37:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:37:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:37:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:37:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:37:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php
+---
+2013/08/18 15:38:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php
+---
+2013/08/18 15:38:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&admin=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:38:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&admin=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&admin=usuario
+---
+2013/08/18 15:38:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&admin=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&admin=usuario
+---
+2013/08/18 15:38:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&admin=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&admin=usuario
+---
+2013/08/18 15:38:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&admin=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&admin=usuario
+---
+2013/08/18 15:38:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&admin=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&admin=usuario
+---
+2013/08/18 15:38:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&admin=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&admin=usuario
+---
+2013/08/18 15:38:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&admin=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&admin=usuario
+---
+2013/08/18 15:38:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&admin=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&admin=usuario
+---
+2013/08/18 15:38:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&admin=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&admin=usuario
+---
+2013/08/18 15:38:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario&admin=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&admin=usuario
+---
+2013/08/18 15:38:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario&admin=usuario
+---
+2013/08/18 15:38:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:38:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:38:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:38:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php
+---
+2013/08/18 15:39:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=usuario/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=usuario
+---
+2013/08/18 15:39:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=usuario/usuario
+---
+2013/08/18 15:39:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:39:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:39:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:39:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:39:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/18 15:42:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "usuario".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('usuario')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('usuario')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/usuario')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=site/usuario
+---
+2013/08/19 23:39:43 [error] [php] Undefined variable: model (/var/www/vtv/themes/classic/views/site/index.php:43)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/vtv/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=site/index
+in /var/www/vtv/themes/classic/views/site/index.php (43)
+in /var/www/vtv/protected/controllers/SiteController.php (32)
+in /var/www/vtv/index.php (13)
+2013/08/19 23:45:48 [error] [php] Undefined variable: model (/var/www/vtv/themes/classic/views/site/index.php:43)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/vtv/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=site/index
+in /var/www/vtv/themes/classic/views/site/index.php (43)
+in /var/www/vtv/protected/controllers/SiteController.php (32)
+in /var/www/vtv/index.php (13)
+2013/08/19 23:51:34 [error] [php] Undefined variable: model (/var/www/vtv/themes/classic/views/site/index.php:43)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/vtv/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=site/index
+in /var/www/vtv/themes/classic/views/site/index.php (43)
+in /var/www/vtv/protected/controllers/SiteController.php (32)
+in /var/www/vtv/index.php (13)
+2013/08/19 23:51:36 [error] [php] Undefined variable: model (/var/www/vtv/themes/classic/views/site/index.php:43)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/vtv/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=site/index
+in /var/www/vtv/themes/classic/views/site/index.php (43)
+in /var/www/vtv/protected/controllers/SiteController.php (32)
+in /var/www/vtv/index.php (13)
+2013/08/20 00:01:07 [error] [php] Undefined variable: model (/var/www/vtv/themes/classic/views/site/index.php:43)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/vtv/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=site/index
+in /var/www/vtv/themes/classic/views/site/index.php (43)
+in /var/www/vtv/protected/controllers/SiteController.php (32)
+in /var/www/vtv/index.php (13)
+2013/08/20 00:01:14 [error] [php] Undefined variable: model (/var/www/vtv/themes/classic/views/site/index.php:43)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/vtv/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/
+in /var/www/vtv/themes/classic/views/site/index.php (43)
+in /var/www/vtv/protected/controllers/SiteController.php (32)
+in /var/www/vtv/index.php (13)
+2013/08/20 00:02:34 [error] [php] get_class() expects parameter 1 to be object, integer given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/widgets/CActiveForm.php(562): activeLabelEx()
+#1 /var/www/vtv/themes/classic/views/site/index.php(47): CActiveForm->labelEx()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#6 /var/www/vtv/protected/controllers/SiteController.php(32): SiteController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#10 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#11 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/
+in /var/www/vtv/themes/classic/views/site/index.php (47)
+in /var/www/vtv/protected/controllers/SiteController.php (32)
+in /var/www/vtv/index.php (13)
+2013/08/20 00:02:36 [error] [php] get_class() expects parameter 1 to be object, integer given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/widgets/CActiveForm.php(562): activeLabelEx()
+#1 /var/www/vtv/themes/classic/views/site/index.php(47): CActiveForm->labelEx()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#6 /var/www/vtv/protected/controllers/SiteController.php(32): SiteController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#10 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#11 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/
+in /var/www/vtv/themes/classic/views/site/index.php (47)
+in /var/www/vtv/protected/controllers/SiteController.php (32)
+in /var/www/vtv/index.php (13)
+2013/08/20 00:02:36 [error] [php] get_class() expects parameter 1 to be object, integer given (/var/www/yii/framework/web/helpers/CHtml.php:2220)
+Stack trace:
+#0 /var/www/yii/framework/web/widgets/CActiveForm.php(562): activeLabelEx()
+#1 /var/www/vtv/themes/classic/views/site/index.php(47): CActiveForm->labelEx()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#5 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#6 /var/www/vtv/protected/controllers/SiteController.php(32): SiteController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#10 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#11 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#12 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#14 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/
+in /var/www/vtv/themes/classic/views/site/index.php (47)
+in /var/www/vtv/protected/controllers/SiteController.php (32)
+in /var/www/vtv/index.php (13)
+2013/08/20 00:17:33 [error] [php] Undefined variable: model (/var/www/vtv/themes/classic/views/site/index.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/vtv/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/
+in /var/www/vtv/themes/classic/views/site/index.php (47)
+in /var/www/vtv/protected/controllers/SiteController.php (32)
+in /var/www/vtv/index.php (13)
+2013/08/20 00:17:34 [error] [php] Undefined variable: model (/var/www/vtv/themes/classic/views/site/index.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/vtv/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/
+in /var/www/vtv/themes/classic/views/site/index.php (47)
+in /var/www/vtv/protected/controllers/SiteController.php (32)
+in /var/www/vtv/index.php (13)
+2013/08/20 00:17:34 [error] [php] Undefined variable: model (/var/www/vtv/themes/classic/views/site/index.php:47)
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): SiteController->renderFile()
+#1 /var/www/yii/framework/web/CController.php(782): SiteController->renderPartial()
+#2 /var/www/vtv/protected/controllers/SiteController.php(32): SiteController->render()
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/
+in /var/www/vtv/themes/classic/views/site/index.php (47)
+in /var/www/vtv/protected/controllers/SiteController.php (32)
+in /var/www/vtv/index.php (13)
+2013/08/20 00:17:53 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "/var/www/vtv/themes/classic/views/site/index.php". A CActiveForm widget does not have an endWidget() call.' in /var/www/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/th...', NULL, true)
+#1 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#2 /var/www/vtv/protected/controllers/SiteController.php(32): CController->render('index')
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vtv/
+---
+2013/08/20 00:17:54 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "/var/www/vtv/themes/classic/views/site/index.php". A CActiveForm widget does not have an endWidget() call.' in /var/www/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/th...', NULL, true)
+#1 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#2 /var/www/vtv/protected/controllers/SiteController.php(32): CController->render('index')
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vtv/
+---
+2013/08/20 00:17:55 [error] [exception.CException] exception 'CException' with message 'SiteController contains improperly nested widget tags in its view "/var/www/vtv/themes/classic/views/site/index.php". A CActiveForm widget does not have an endWidget() call.' in /var/www/yii/framework/web/CBaseController.php:101
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/th...', NULL, true)
+#1 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#2 /var/www/vtv/protected/controllers/SiteController.php(32): CController->render('index')
+#3 /var/www/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#4 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /var/www/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vtv/
+---

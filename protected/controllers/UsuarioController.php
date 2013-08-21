@@ -51,8 +51,23 @@ class UsuarioController extends Controller
 	 */
 	public function actionView($id)
 	{
+		$role=new RoleForm;
+
+		if(isset($_POST["RoleForm"]))
+		{
+		$role->attributes=$_POST["RoleForm"];
+		if($role->validate())
+		{
+			$role->name;
+			$role->description;
+			Yii::app()->authManager->createRole($role->name,$role->description);
+			Yii::app()->authManager->assign($role->name,$id);
+			$this->redirect(array("view","id"=>$id));
+		}
+		}
 		$this->render('view',array(
 			'model'=>$this->loadModel($id),
+			'role'=>$role,
 		));
 	}
 
@@ -70,6 +85,8 @@ class UsuarioController extends Controller
 		if(isset($_POST['Usuario']))
 		{
 			$model->attributes=$_POST['Usuario'];
+			$model->nombre= strtoupper($model->nombre);
+			$model->apellido= strtoupper($model->apellido);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idUsuario));
 		}
@@ -94,6 +111,8 @@ class UsuarioController extends Controller
 		if(isset($_POST['Usuario']))
 		{
 			$model->attributes=$_POST['Usuario'];
+			$model->nombre= strtoupper($model->nombre);
+			$model->apellido= strtoupper($model->apellido);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idUsuario));
 		}
@@ -169,5 +188,15 @@ class UsuarioController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+
+	public function actionAssign($id)
+	{
+		if (Yii::app()->authManager->checkAccess($_GET["item"],$id))
+			Yii::app()->authManager->revoke($_GET["item"],$id);
+		else
+			Yii::app()->authManager->assign($_GET["item"],$id);
+		
+		$this->redirect(array("view","id"=>$id));
 	}
 }
