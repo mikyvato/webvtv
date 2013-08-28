@@ -19,19 +19,22 @@ class UserIdentity extends CUserIdentity
 	public function authenticate()
 	{
 		$username=strtolower($this->username);
-		$user=Usuarios::model()->find('LOWER(username)=?',array($username));
+		$user=Usuario::model()->find('LOWER(username)=?',array($username));
 		if($user===null)
 		  $this->errorCode=self::ERROR_USERNAME_INVALID;
 		else if(!$user->validatePassword($this->password))
 		  $this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else{
-			$this->_id=$user->id_usuario;
+			$this->_id=$user->idUsuario;
 			$this->username=$user->username;
 			$this->errorCode=self::ERROR_NONE;
 
-			$info_usuario = Usuarios::model()->find('LOWER(username)=?', array($user->username));
+			$info_usuario = Usuario::model()->find('LOWER(username)=?', array($user->username));
+			
 			$this->setState('last_login',$info_usuario->last_login);
-			$sql = "UPDATE `usuarios` SET last_login = NOW( ) WHERE username = '$user->username'";
+			//$this->setState('nombre',$info_usuario->username); //Yii::app()->user-getState('nombre')
+			
+			$sql = "UPDATE `usuario` SET last_login = NOW( ) WHERE username = '$user->username'";
 			$connection = Yii::app() -> db;
 			$command = $connection -> createCommand($sql);
 			$command -> execute();

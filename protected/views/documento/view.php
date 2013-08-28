@@ -23,6 +23,10 @@ $this->menu=array(
 	'attributes'=>array(
 		'iddocumento',
 		'nombre',
-		'estado',
+		array(
+			'label' => 'Estado',
+			'value' => Documento::getEstado($model->estado)
+		),
+		
 	),
 )); ?>

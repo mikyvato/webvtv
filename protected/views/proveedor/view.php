@@ -26,6 +26,9 @@ $this->menu=array(
 		'telefono',
 		'email',
 		'observacion',
-		'estado',
+		array(
+			'label'=>'Estado',
+			'value'=>Proveedor::getEstado($model->estado),
+			),
 	),
 )); ?>

@@ -5,8 +5,8 @@
 
     <div class="well">
 
-          <i style="font-size: 200px" class="icon-credit-card icon-4x"></i>
-          <h2>Heading</h2>
+          <i style="font-size: 200px" class="icon-ok-circle icon-4x"></i>
+          <h2>Bolsin</h2>
 
     <div class="row-fluid">
             <div class="span4" style="text-align:center;">
@@ -31,7 +31,8 @@
 <div class="span4">
   <div class="well">
   <?php 
-      /*
+  
+      
       $form=$this->beginWidget('CActiveForm', array(
       	'id'=>'login-form',
       	'action'=>$this->createUrl("site/login"),
@@ -44,7 +45,7 @@
 
   ?>
   <?php    
-     /*
+     
      echo $form->labelEx($model,'username'); 
      echo $form->textField($model,'username',array("class"=>"input-block-level","placeholder"=>"Username")); 
      echo $form->error($model,'username'); 
@@ -59,7 +60,8 @@
      echo $form->error($model,'rememberMe'); 
 
      echo CHtml::submitButton('Login',array("class"=>"btn btn-primary pull-right")); 
-     $this->endWidget(); */?>
+     $this->endWidget(); 
+    ?>
 
   </div>
 

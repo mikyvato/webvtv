@@ -13,6 +13,15 @@
  */
 class Documento extends CActiveRecord
 {
+	public static $estado = array('0'=>'Inactivo','1'=>'Activo');
+
+	public static function getEstado($key=null)
+        {
+            if ($key !== null)
+                return self::$estado[$key];
+            return self::$estado;
+        }
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -41,7 +50,7 @@ class Documento extends CActiveRecord
 		return array(
 			array('nombre, estado', 'required'),
 			array('nombre', 'length', 'max'=>150),
-			array('estado', 'length', 'max'=>45),
+			array('estado', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('iddocumento, nombre, estado', 'safe', 'on'=>'search'),
@@ -91,4 +100,9 @@ class Documento extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public static function getListDocumento ()
+    {
+            return CHtml::listData(Documento::model()->findAll('estado=1'),'iddocumento','nombre');
+    }
 }

@@ -14,6 +14,22 @@
  */
 class Destinatario extends CActiveRecord
 {
+	public static $recFactura = array('0'=>'No','1'=>'Si');
+	public static $estado = array('0'=>'Inactivo','1'=>'Activo');
+
+	public static function getEstado($key=null)
+        {
+            if ($key !== null)
+                return self::$estado[$key];
+            return self::$estado;
+        }
+
+    public static function getRecFactura($key=null)
+        {
+            if ($key !== null)
+                return self::$recFactura[$key];
+            return self::$recFactura;
+        }
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -69,7 +85,7 @@ class Destinatario extends CActiveRecord
 		return array(
 			'iddestinatario' => 'Iddestinatario',
 			'descripcion' => 'Descripcion',
-			'recFactura' => 'Rec Factura',
+			'recFactura' => 'Recibe Factura',
 			'estado' => 'Estado',
 		);
 	}
@@ -94,4 +110,14 @@ class Destinatario extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public static function getListDestinatario ()
+    {
+            return CHtml::listData(Destinatario::model()->findAll('estado=1'),'iddestinatario','descripcion');
+    }
+
+    public static function getListDestinatarioRecFac ()
+    {
+            return CHtml::listData(Destinatario::model()->findAll('recFactura=1'),'iddestinatario','descripcion');
+    }
 }

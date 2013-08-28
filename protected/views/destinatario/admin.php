@@ -47,8 +47,18 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'iddestinatario',
 		'descripcion',
-		'recFactura',
-		'estado',
+		array(
+			'name'=>'recFactura',
+			'header'=>'Recibe Factura',
+			'value'=>'Destinatario::getRecFactura($data->recFactura)',
+			'filter'=>Destinatario::getRecFactura(),
+			),
+		array(
+                'name'=>'estado',
+                'header'=>'Estado',
+                'value'=>'Destinatario::getEstado($data->estado)',
+                'filter'=>Destinatario::getEstado(),
+                ),
 		array(
 			'class'=>'CButtonColumn',
 		),

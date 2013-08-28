@@ -14,11 +14,11 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('recFactura')); ?>:</b>
-	<?php echo CHtml::encode($data->recFactura); ?>
+	<?php echo CHtml::encode(Destinatario::getRecFactura($data->recFactura)); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
-	<?php echo CHtml::encode($data->estado); ?>
+	<?php echo CHtml::encode(Destinatario::getEstado($data->estado)); ?>
 	<br />
 
 

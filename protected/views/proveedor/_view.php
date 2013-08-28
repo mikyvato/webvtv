@@ -26,7 +26,7 @@
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
-	<?php echo CHtml::encode($data->estado); ?>
+	<?php echo CHtml::encode(Proveedor::getEstado($data->estado)); ?>
 	<br />
 
 

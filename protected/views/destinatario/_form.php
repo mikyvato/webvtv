@@ -15,26 +15,26 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+	<div class="">
 		<?php echo $form->labelEx($model,'descripcion'); ?>
 		<?php echo $form->textField($model,'descripcion',array('size'=>60,'maxlength'=>120)); ?>
 		<?php echo $form->error($model,'descripcion'); ?>
 	</div>
 
-	<div class="row">
+	<div class="">
 		<?php echo $form->labelEx($model,'recFactura'); ?>
-		<?php echo $form->textField($model,'recFactura'); ?>
+		<?php echo $form->dropDownList($model,'recFactura',array('0'=>'No','1'=>'SI')); ?>
 		<?php echo $form->error($model,'recFactura'); ?>
 	</div>
 
-	<div class="row">
+	<div class="">
 		<?php echo $form->labelEx($model,'estado'); ?>
-		<?php echo $form->textField($model,'estado'); ?>
+		<?php echo $form->dropDownList($model,'estado',array('0'=>'Dasactivado','1'=>'Habilitado')); ?>
 		<?php echo $form->error($model,'estado'); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="buttons">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array("class"=>"btn-primary")); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

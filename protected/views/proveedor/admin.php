@@ -50,7 +50,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'telefono',
 		'email',
 		'observacion',
-		'estado',
+		array(
+              'name'=>'estado',
+              'header'=>'Estado',
+              'value'=>'Proveedor::getEstado($data->estado)',
+              'filter'=>Proveedor::getEstado(),
+			),
 		array(
 			'class'=>'CButtonColumn',
 		),

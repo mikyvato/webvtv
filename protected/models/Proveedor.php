@@ -16,6 +16,14 @@
  */
 class Proveedor extends CActiveRecord
 {
+	public static $estado = array('0'=>'Inactivo','1'=>'Activo');
+
+	public static function getEstado($key=null)
+        {
+            if ($key !== null)
+                return self::$estado[$key];
+            return self::$estado;
+        }
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -102,4 +110,9 @@ class Proveedor extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public static function getListProveedor ()
+    {
+            return CHtml::listData(Proveedro::model()->findAll('estado=1'),'idproveedor','nombre');
+    }
 }

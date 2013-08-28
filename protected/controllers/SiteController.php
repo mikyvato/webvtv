@@ -27,9 +27,11 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$model=new LoginForm;
+		$this->layout='main';
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+		$this->render('index',array('model'=>$model));
 	}
 
 	/**

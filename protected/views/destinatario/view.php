@@ -23,7 +23,13 @@ $this->menu=array(
 	'attributes'=>array(
 		'iddestinatario',
 		'descripcion',
-		'recFactura',
-		'estado',
+		array(
+			'label'=>'Recibe Factura',
+			'value'=>Destinatario::getRecFactura($model->recFactura),
+			),
+		array(
+			'label'=>'Estado',
+			'value'=>Destinatario::getEstado($model->estado),
+			),
 	),
 )); ?>

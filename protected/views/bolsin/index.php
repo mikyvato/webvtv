@@ -3,7 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Bolsins',
+	'Bolsines',
 );
 
 $this->menu=array(

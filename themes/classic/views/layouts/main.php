@@ -40,8 +40,12 @@
           'htmlOptions'=>array("class"=>"nav"),
           'items'=>array(
             array('label'=>'Home', 'url'=>array('/site/index')),
-            array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-            array('label'=>'Contact', 'url'=>array('/site/contact')),
+            array('label'=>'Usuarios', 'url'=>array('/usuario')),
+            array('label'=>'Bolsin', 'url'=>array('/bolsin')),
+            array('label'=>'Destinatarios', 'url'=>array('/destinatario')),
+            array('label'=>'Facturas', 'url'=>array('/factura')),
+            array('label'=>'Proveedores', 'url'=>array('/proveedor')),
+            array('label'=>'Documentos', 'url'=>array('/documento')),
             array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
             array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
           ),
@@ -52,19 +56,25 @@
     </div>
   </div>
 </div>
-
 <?php if(!empty($this->breadcrumbs)):?>
-  <div class="container" style="padding:0">
-  <div class="row-fluid">
-  <div class="span12">
-      <?php $this->widget('zii.widgets.CBreadcrumbs', array(
-        'htmlOptions'=>array("style"=>"margin: 10px 0;"),
-        'links'=>$this->breadcrumbs,
-      )); ?><!-- breadcrumbs -->
-  </div>
-  </div> 
-  </div>
+<div class="container">
+	<div class="row-fluid">
+		<div class="span12">
+		  <div style="padding:0">
+			  <div class="row-fluid">
+				  <div class="span12">
+				      <?php $this->widget('zii.widgets.CBreadcrumbs', array(
+				        'htmlOptions'=>array("style"=>"margin: 10px 0;"),
+				        'links'=>$this->breadcrumbs,
+				      )); ?><!-- breadcrumbs -->
+				  </div>
+			  </div> 
+		  </div>
+		</div>
+	</div>
+</div>
 <?php endif?>
+
 <?php if(($msgs=Yii::app()->user->getFlashes())!==null and $msgs!==array()):?>
   <div class="container" style="padding-top:0">
     <div class="row-fluid">

@@ -47,7 +47,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'iddocumento',
 		'nombre',
-		'estado',
+		array(
+                'name'=>'estado',
+                'header'=>'Estado',
+                'value'=>'Documento::getEstado($data->estado)',
+                'filter'=>Documento::getEstado(),
+             ),
 		array(
 			'class'=>'CButtonColumn',
 		),
