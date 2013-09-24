@@ -15,7 +15,9 @@ $this->menu=array(
 	array('label'=>'Manage Factura', 'url'=>array('admin')),
 );
 ?>
-
+<div class="span3">&nbsp;</div>
+<div class="span7">
 <h1>Update Factura <?php echo $model->idfactura; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

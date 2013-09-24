@@ -13,21 +13,20 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($model,null,null,array('class'=>'alert alert-error')); ?>
 
-	<div class="">
+	<div class="well">
+
 		<?php echo $form->labelEx($model,'nombre'); ?>
+		<div class="push-right">
 		<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>150)); ?>
+		</div>
 		<?php echo $form->error($model,'nombre'); ?>
-	</div>
-
-	<div class="">
+		
 		<?php echo $form->labelEx($model,'estado'); ?>
 		<?php echo $form->dropDownList($model,'estado',array('0'=>'Dasactivado','1'=>'Habilitado')); ?>
 		<?php echo $form->error($model,'estado'); ?>
-	</div>
-
-	<div class="buttons">
+		<br>
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array("class"=>"btn-primary")); ?>
 	</div>
 

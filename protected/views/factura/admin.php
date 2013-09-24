@@ -9,6 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Factura', 'url'=>array('index')),
+	array('label'=>'/'),
 	array('label'=>'Create Factura', 'url'=>array('create')),
 );
 
@@ -25,7 +26,8 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-
+<div class="span2">&nbsp;</div>
+<div class="span8">
 <h1>Manage Facturas</h1>
 
 <p>
@@ -47,10 +49,20 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'idfactura',
 		'numero',
-		'fecha',
+		array(
+			'header'=>'Fecha',
+			'name'=>'fecha',
+			'value'=>'Factura::dateUpdate($data->fecha,2)',
+			//'filter'=>$this->widget('zii.widgets.jui.CJuiDatePicker', array('model'=>$model, 'attribute'=>'fecha', 'language'=> 'es', 'options'=> array('dateFormat'=>'dd-mm-yy','changeMonth'=> true,'changeYear'=> true,'constrainInput' => 'false', 'duration'=>'fast', 'showAnim'=>'slide',),)); 
+			),
 		'monto',
 		'observacion',
-		'estado',
+		array(
+			'header'=>'Estado',
+			'name'=>'estado',
+			'value'=>'Factura::getEStado($data->estado)',
+			'filter'=>Factura::getEstado(),
+			),
 		/*
 		'proveedor_idproveedor',
 		*/
@@ -59,3 +71,4 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		),
 	),
 )); ?>
+</div>

@@ -9,6 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Bolsin', 'url'=>array('index')),
+	array('label'=>'/'),
 	array('label'=>'Create Bolsin', 'url'=>array('create')),
 );
 
@@ -25,7 +26,8 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-
+<div class="span2">&nbsp;</div>
+<div class="span8">
 <h1>Manage Bolsins</h1>
 
 <p>
@@ -46,12 +48,26 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'filter'=>$model,
 	'columns'=>array(
 		'idbolsin',
-		'fecha',
+		array(
+			'header'=>'Fecha',
+			'name'=>'fecha',
+			'value'=>'Factura::dateUpdate($data->fecha,2)',
+			),
 		'observacion',
-		'estado',
-		'usuario_idUsuario',
+		array(
+			'name'=>'usuario_idUsuario',
+			'header'=>'Usuario Responsable',
+			'value'=>'Usuario::getUserName($data->usuario_idUsuario)',
+			),
+		array(
+                'name'=>'estado',
+                'header'=>'Estado',
+                'value'=>'Bolsin::getEstado($data->estado)',
+                'filter'=>Bolsin::getEstado(),
+                ),
 		array(
 			'class'=>'CButtonColumn',
 		),
 	),
 )); ?>
+</div>

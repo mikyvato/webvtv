@@ -18,6 +18,49 @@
  */
 class Factura extends CActiveRecord
 {
+	public static $estado = array('0'=>'Inactivo','1'=>'Activo');
+	public static $tipo = array('A'=>'Tipo A','B'=>'Tipo B','C'=>'Tipo C','D'=>'Tipo D','E'=>'Tipo E','F'=>'Tipo F');
+
+	public static function getEstado($key=null)
+        {
+            if ($key !== null)
+                return self::$estado[$key];
+            return self::$estado;
+        }
+
+    public static function getTipo($key=null)
+        {
+            if ($key !== null)
+                return self::$tipo[$key];
+            return self::$tipo;
+        }
+
+    /**
+	* Return the date based on the formar type. 
+	* @param date format dd/mm/YY  
+	* @return date in format yyyy/mm/dd	
+	*/
+	public function dateUpdate($date,$type)
+	{
+		if ($type == 1){
+			$dia = substr($date,0,2);
+			$mes = substr($date,3,2);
+			$anio = substr($date,-4,4);
+		
+			$var = $anio."-".$mes."-".$dia;
+		}
+
+		if ($type == 2){
+			$anio = substr($date,0,4);
+			$mes = substr($date,5,2);
+			$dia = substr($date,-2,2);
+
+			$var = $dia."/".$mes."/".$anio;
+		}
+		
+		return $var;
+	}
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -46,6 +89,7 @@ class Factura extends CActiveRecord
 		return array(
 			array('numero, fecha, proveedor_idproveedor', 'required'),
 			array('estado, proveedor_idproveedor', 'numerical', 'integerOnly'=>true),
+			array('tipo', 'length', 'max'=>1),
 			array('numero', 'length', 'max'=>80),
 			array('monto', 'length', 'max'=>12),
 			array('observacion', 'length', 'max'=>200),
@@ -76,6 +120,7 @@ class Factura extends CActiveRecord
 		return array(
 			'idfactura' => 'Idfactura',
 			'numero' => 'Numero',
+			'tipo' => 'Tipo de Fac',
 			'fecha' => 'Fecha',
 			'monto' => 'Monto',
 			'observacion' => 'Observacion',
@@ -97,6 +142,7 @@ class Factura extends CActiveRecord
 
 		$criteria->compare('idfactura',$this->idfactura);
 		$criteria->compare('numero',$this->numero,true);
+		$criteria->compare('tipo',$this->tipo,true);
 		$criteria->compare('fecha',$this->fecha,true);
 		$criteria->compare('monto',$this->monto,true);
 		$criteria->compare('observacion',$this->observacion,true);

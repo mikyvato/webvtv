@@ -8,13 +8,16 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Create Factura', 'url'=>array('create')),
+	array('label'=>'/'),
 	array('label'=>'Manage Factura', 'url'=>array('admin')),
 );
 ?>
-
+<div class="span2">&nbsp;</div>
+<div class="span8">
 <h1>Facturas</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
+</div>

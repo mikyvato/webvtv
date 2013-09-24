@@ -9,13 +9,12 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Documento', 'url'=>array('index')),
-	array('label'=>'Create Documento', 'url'=>array('create')),
-	array('label'=>'Update Documento', 'url'=>array('update', 'id'=>$model->iddocumento)),
-	array('label'=>'Delete Documento', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->iddocumento),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Documento', 'url'=>array('admin')),
+	array('label'=>'/'),
+	array('label'=>'Update Documento', 'url'=>array('update', 'id'=>$model->iddocumento)),	
 );
 ?>
-
+<div class="span3">&nbsp;</div>
+<div class="span7">
 <h1>View Documento #<?php echo $model->iddocumento; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
@@ -30,3 +29,4 @@ $this->menu=array(
 		
 	),
 )); ?>
+</div>

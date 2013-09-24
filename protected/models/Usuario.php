@@ -125,4 +125,10 @@ class Usuario extends CActiveRecord
   	{
     	return $password;
   	}
+
+  	public static function getUserName ($id)
+    {
+       	$user = Usuario::model()->findByPk($id);
+       	return $user->nombre.', '.$user->apellido;
+    }
 }

@@ -70,6 +70,7 @@ class BolsinController extends Controller
 		if(isset($_POST['Bolsin']))
 		{
 			$model->attributes=$_POST['Bolsin'];
+			$model->fecha = Factura::dateUpdate($model->fecha,1);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idbolsin));
 		}
@@ -94,6 +95,7 @@ class BolsinController extends Controller
 		if(isset($_POST['Bolsin']))
 		{
 			$model->attributes=$_POST['Bolsin'];
+			$model->fecha = Factura::dateUpdate($model->fecha,1);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idbolsin));
 		}
@@ -122,6 +124,7 @@ class BolsinController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$this->layout='//layouts/options3';
 		$dataProvider=new CActiveDataProvider('Bolsin');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,

@@ -9,13 +9,12 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Destinatario', 'url'=>array('index')),
-	array('label'=>'Create Destinatario', 'url'=>array('create')),
+	array('label'=>'/'),
 	array('label'=>'Update Destinatario', 'url'=>array('update', 'id'=>$model->iddestinatario)),
-	array('label'=>'Delete Destinatario', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->iddestinatario),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Destinatario', 'url'=>array('admin')),
 );
 ?>
-
+<div class="span3">&nbsp;</div>
+<div class="span7">
 <h1>View Destinatario #<?php echo $model->iddestinatario; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(

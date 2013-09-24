@@ -36,16 +36,41 @@
       <a class="brand" href="#">My app</a>
 
       <div class="nav-collapse collapse pull-right">
-        <?php $this->widget('zii.widgets.CMenu',array(
+        <?php 
+        //el checkAccess retorna el rol
+	    $usuario=false;
+		$bolsin=false;
+		$destinatario=false;
+		$factura=false;
+		$proveedor=false;
+		$documento=false;
+		
+		if (yii::app()->user->checkAccess('Operador')){
+			$bolsin=true;
+			$factura=true;
+			$proveedor=true;
+			
+		}
+
+		if (yii::app()->user->checkAccess('Admin')){
+			$usuario=true;
+			$bolsin=true;
+			$destinatario=true;
+			$factura=true;
+			$proveedor=true;
+			$documento=true;
+		}
+
+          $this->widget('zii.widgets.CMenu',array(
           'htmlOptions'=>array("class"=>"nav"),
           'items'=>array(
             array('label'=>'Home', 'url'=>array('/site/index')),
-            array('label'=>'Usuarios', 'url'=>array('/usuario')),
-            array('label'=>'Bolsin', 'url'=>array('/bolsin')),
-            array('label'=>'Destinatarios', 'url'=>array('/destinatario')),
-            array('label'=>'Facturas', 'url'=>array('/factura')),
-            array('label'=>'Proveedores', 'url'=>array('/proveedor')),
-            array('label'=>'Documentos', 'url'=>array('/documento')),
+            array('label'=>'Usuarios', 'url'=>array('/usuario'),'visible'=>$usuario),
+            array('label'=>'Bolsin', 'url'=>array('/bolsin'),'visible'=>$bolsin),
+            array('label'=>'Destinatarios', 'url'=>array('/destinatario'),'visible'=>$destinatario),
+            array('label'=>'Facturas', 'url'=>array('/factura'),'visible'=>$factura),
+            array('label'=>'Proveedores', 'url'=>array('/proveedor'),'visible'=>$proveedor),
+            array('label'=>'Documentos', 'url'=>array('/documento'),'visible'=>$documento),
             array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
             array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
           ),

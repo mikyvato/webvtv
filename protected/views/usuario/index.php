@@ -8,9 +8,13 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'Create Usuario', 'url'=>array('create')),
+	array('label'=>'/'),
 	array('label'=>'Manage Usuario', 'url'=>array('admin')),
 );
 ?>
+
+<div class="span2">&nbsp;</div>
+<div class="span8">
 
 <h1>Usuarios</h1>
 
@@ -18,3 +22,4 @@ $this->menu=array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',
 )); ?>
+</div>

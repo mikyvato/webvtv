@@ -13,34 +13,33 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($model,null,null,array('class'=>'alert alert-error')); ?>
 
-	<div class="row">
+	<div class="well">
 		<?php echo $form->labelEx($model,'fecha'); ?>
-		<?php echo $form->textField($model,'fecha'); ?>
+		<?php 
+			
+			if($model->fecha !='')
+			     		$model->fecha = date('d-m-Y',strtotime($model->fecha));
+			$this->widget('zii.widgets.jui.CJuiDatePicker', array('model'=>$model, 'attribute'=>'fecha', 'language'=> 'es', 'options'=> array('dateFormat'=>'dd-mm-yy','changeMonth'=> true,
+				'changeYear'=> true,'constrainInput' => 'false', 'duration'=>'fast', 'showAnim'=>'slide',),)); 
+		?>
+
 		<?php echo $form->error($model,'fecha'); ?>
-	</div>
-
-	<div class="row">
+	
 		<?php echo $form->labelEx($model,'observacion'); ?>
-		<?php echo $form->textField($model,'observacion',array('size'=>60,'maxlength'=>250)); ?>
+		<?php echo $form->textArea($model,'observacion',array('size'=>60,'maxlength'=>250)); ?>
 		<?php echo $form->error($model,'observacion'); ?>
-	</div>
-
-	<div class="row">
+	
 		<?php echo $form->labelEx($model,'estado'); ?>
-		<?php echo $form->textField($model,'estado'); ?>
+		<?php echo $form->dropDownList($model,'estado',array('1'=>'Activo')); ?>
 		<?php echo $form->error($model,'estado'); ?>
-	</div>
+	
+		<?php echo $form->hiddenField($model,'usuario_idUsuario',array('value'=>Yii::app()->user->id)); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'usuario_idUsuario'); ?>
-		<?php echo $form->textField($model,'usuario_idUsuario'); ?>
-		<?php echo $form->error($model,'usuario_idUsuario'); ?>
+	<div class="pull-right">
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array("class"=>"btn-primary btn-large")); ?>
 	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

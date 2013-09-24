@@ -8,14 +8,16 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Factura', 'url'=>array('index')),
+	//array('label'=>'List Factura', 'url'=>array('index')),
 	array('label'=>'Create Factura', 'url'=>array('create')),
-	array('label'=>'Update Factura', 'url'=>array('update', 'id'=>$model->idfactura)),
-	array('label'=>'Delete Factura', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idfactura),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'/'),
+	//array('label'=>'Update Factura', 'url'=>array('update', 'id'=>$model->idfactura)),
+	//array('label'=>'Delete Factura', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idfactura),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Factura', 'url'=>array('admin')),
 );
 ?>
-
+<div class="span3">&nbsp;</div>
+<div class="span7">
 <h1>View Factura #<?php echo $model->idfactura; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
@@ -23,10 +25,23 @@ $this->menu=array(
 	'attributes'=>array(
 		'idfactura',
 		'numero',
-		'fecha',
-		'monto',
+		array(
+			'label'=>'Fecha',
+			'value'=>Factura::dateUpdate($model->fecha,2),
+			),
+		array(
+			'label'=>'Monto',
+			'value'=>'$ '.$model->monto,
+			),
 		'observacion',
-		'estado',
-		'proveedor_idproveedor',
+		array(
+			'label'=>'Proveedor',
+			'value'=>Proveedor::getProveedor($model->proveedor_idproveedor)
+			),
+		array(
+			'label'=>'Estado',
+			'value'=>Factura::getEstado($model->estado),
+			),
 	),
 )); ?>
+</div>

@@ -10,12 +10,14 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Proveedor', 'url'=>array('index')),
-	array('label'=>'Create Proveedor', 'url'=>array('create')),
-	array('label'=>'View Proveedor', 'url'=>array('view', 'id'=>$model->idproveedor)),
+	array('label'=>'/'),
 	array('label'=>'Manage Proveedor', 'url'=>array('admin')),
 );
 ?>
 
+<div class="span3">&nbsp;</div>
+<div class="span7">
 <h1>Update Proveedor <?php echo $model->idproveedor; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

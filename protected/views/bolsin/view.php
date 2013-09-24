@@ -8,23 +8,33 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Bolsin', 'url'=>array('index')),
 	array('label'=>'Create Bolsin', 'url'=>array('create')),
-	array('label'=>'Update Bolsin', 'url'=>array('update', 'id'=>$model->idbolsin)),
-	array('label'=>'Delete Bolsin', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idbolsin),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'/'),
 	array('label'=>'Manage Bolsin', 'url'=>array('admin')),
 );
 ?>
-
+<div class="span3">&nbsp;</div>
+<div class="span7">
 <h1>View Bolsin #<?php echo $model->idbolsin; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
 		'idbolsin',
-		'fecha',
+		array(
+			'label'=>'Fecha',
+			'value'=>Factura::dateUpdate($model->fecha,2),
+			),
+
 		'observacion',
-		'estado',
-		'usuario_idUsuario',
+		array(
+			'label'=>'Usuario Responsable',
+			'value'=>Usuario::getUserName($model->usuario_idUsuario),
+			),
+		array(
+			'label'=>'Estado',
+			'value'=>Bolsin::getEstado($model->estado),
+			),
 	),
 )); ?>
+</div>

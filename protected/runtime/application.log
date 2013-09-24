@@ -1373,3 +1373,850 @@ REQUEST_URI=/vtv/index.php?r=destinatario/admin
 in /var/www/vtv/protected/views/destinatario/admin.php (66)
 in /var/www/vtv/protected/controllers/DestinatarioController.php (139)
 in /var/www/vtv/index.php (13)
+2013/08/27 23:43:00 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vtv/index.php?r=usuario
+HTTP_REFERER=http://localhost/vtv/index.php
+---
+2013/08/27 23:43:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vtv/index.php?r=usuario
+HTTP_REFERER=http://localhost/vtv/index.php?r=usuario
+---
+2013/08/28 20:36:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in /var/www/yii/framework/web/auth/CAccessControlFilter.php:179
+Stack trace:
+#0 /var/www/yii/framework/web/auth/CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 /var/www/yii/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#6 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#8 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('factura/admin')
+#9 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#10 /var/www/vtv/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vtv/index.php?r=factura/admin
+HTTP_REFERER=http://localhost/vtv/index.php?r=factura
+---
+2013/09/05 00:03:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "oficial/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('oficial/index')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/vtv/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vtv/index.php?r=oficial/index
+HTTP_REFERER=http://localhost/vtv/index.php
+---
+2013/09/05 00:03:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "visitante/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('visitante/index')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/vtv/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vtv/index.php?r=visitante/index
+HTTP_REFERER=http://localhost/vtv/index.php?r=oficial/index
+---
+2013/09/05 00:03:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "visita/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('visita/index')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/vtv/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vtv/index.php?r=visita/index
+HTTP_REFERER=http://localhost/vtv/index.php?r=visitante/index
+---
+2013/09/05 00:03:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "conducta/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('conducta/index')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/vtv/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vtv/index.php?r=conducta/index
+HTTP_REFERER=http://localhost/vtv/index.php?r=visita/index
+---
+2013/09/05 00:03:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "conductaClasificacion/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('conductaClasifi...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/vtv/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vtv/index.php?r=conductaClasificacion/index
+HTTP_REFERER=http://localhost/vtv/index.php?r=conducta/index
+---
+2013/09/05 00:03:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "conductaClasificacion/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('conductaClasifi...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/vtv/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vtv/index.php?r=conductaClasificacion/index
+HTTP_REFERER=http://localhost/vtv/index.php?r=conductaClasificacion/index
+---
+2013/09/05 00:03:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cama/admin".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('cama/admin')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/vtv/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vtv/index.php?r=cama/admin
+HTTP_REFERER=http://localhost/vtv/index.php?r=conductaClasificacion/index
+---
+2013/09/05 00:04:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "causa/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('causa/index')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/vtv/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vtv/index.php?r=causa/index
+HTTP_REFERER=http://localhost/vtv/index.php?r=cama/admin
+---
+2013/09/05 00:04:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "disposicionJuridica/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('disposicionJuri...')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/vtv/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vtv/index.php?r=disposicionJuridica/index
+HTTP_REFERER=http://localhost/vtv/index.php?r=causa/index
+---
+2013/09/05 00:04:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interno/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interno/index')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/vtv/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vtv/index.php?r=interno/index
+HTTP_REFERER=http://localhost/vtv/index.php?r=disposicionJuridica/index
+---
+2013/09/05 00:05:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interno/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interno/index')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/vtv/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vtv/index.php?r=interno/index
+HTTP_REFERER=http://localhost/vtv/index.php?r=disposicionJuridica/index
+---
+2013/09/05 00:05:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "interno/index".' in /var/www/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('interno/index')
+#1 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#2 /var/www/vtv/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vtv/index.php?r=interno/index
+HTTP_REFERER=http://localhost/vtv/index.php?r=disposicionJuridica/index
+---
+2013/09/08 19:45:44 [error] [php] Invalid argument supplied for foreach() (/var/www/yii/framework/zii/widgets/CMenu.php:260)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(147): CMenu->init()
+#1 /var/www/yii/framework/web/CBaseController.php(172): DocumentoController->createWidget()
+#2 /var/www/vtv/protected/views/layouts/column2.php(17): DocumentoController->widget()
+#3 /var/www/yii/framework/web/CBaseController.php(126): require()
+#4 /var/www/yii/framework/web/CBaseController.php(95): DocumentoController->renderInternal()
+#5 /var/www/yii/framework/web/CController.php(784): DocumentoController->renderFile()
+#6 /var/www/vtv/protected/controllers/DocumentoController.php(128): DocumentoController->render()
+#7 /var/www/yii/framework/web/actions/CInlineAction.php(49): DocumentoController->actionIndex()
+#8 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#9 /var/www/yii/framework/web/filters/CFilterChain.php(133): DocumentoController->runAction()
+#10 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#12 /var/www/yii/framework/web/filters/CInlineFilter.php(58): DocumentoController->filterAccessControl()
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#14 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(265): DocumentoController->runActionWithFilters()
+#16 /var/www/yii/framework/web/CWebApplication.php(282): DocumentoController->run()
+#17 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#18 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#19 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=documento
+in /var/www/vtv/protected/views/layouts/column2.php (17)
+in /var/www/vtv/protected/controllers/DocumentoController.php (128)
+in /var/www/vtv/index.php (13)
+2013/09/08 20:57:13 [error] [exception.CException] exception 'CException' with message 'DocumentoController has an extra endWidget(CContentDecorator) call in its view.' in /var/www/yii/framework/web/CBaseController.php:210
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#1 /var/www/vtv/protected/views/layouts/column2.php(22): CBaseController->endContent()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#3 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(784): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#5 /var/www/vtv/protected/controllers/DocumentoController.php(128): CController->render('index', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): DocumentoController->actionIndex()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('documento')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/vtv/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vtv/index.php?r=documento
+HTTP_REFERER=http://localhost/vtv/index.php?r=documento
+---
+2013/09/09 00:20:09 [error] [php] include(Proveedro.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/vtv/protected/models/Proveedor.php(116): spl_autoload_call()
+#1 /var/www/vtv/protected/views/factura/_form.php(41): getListProveedor()
+#2 /var/www/yii/framework/web/CBaseController.php(126): require()
+#3 /var/www/yii/framework/web/CBaseController.php(95): FacturaController->renderInternal()
+#4 /var/www/yii/framework/web/CController.php(869): FacturaController->renderFile()
+#5 /var/www/vtv/protected/views/factura/create.php(20): FacturaController->renderPartial()
+#6 /var/www/yii/framework/web/CBaseController.php(126): require()
+#7 /var/www/yii/framework/web/CBaseController.php(95): FacturaController->renderInternal()
+#8 /var/www/yii/framework/web/CController.php(869): FacturaController->renderFile()
+#9 /var/www/yii/framework/web/CController.php(782): FacturaController->renderPartial()
+#10 /var/www/vtv/protected/controllers/FacturaController.php(79): FacturaController->render()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(49): FacturaController->actionCreate()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): FacturaController->runAction()
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): FacturaController->filterAccessControl()
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): FacturaController->runActionWithFilters()
+#20 /var/www/yii/framework/web/CWebApplication.php(282): FacturaController->run()
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=factura/create
+in /var/www/vtv/protected/models/Proveedor.php (116)
+in /var/www/vtv/protected/views/factura/_form.php (41)
+in /var/www/vtv/protected/views/factura/create.php (20)
+2013/09/09 23:05:33 [error] [php] Undefined variable: tipo (/var/www/vtv/protected/models/Factura.php:35)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(95): FacturaController->renderInternal()
+#1 /var/www/yii/framework/web/CController.php(869): FacturaController->renderFile()
+#2 /var/www/vtv/protected/views/factura/create.php(20): FacturaController->renderPartial()
+#3 /var/www/yii/framework/web/CBaseController.php(126): require()
+#4 /var/www/yii/framework/web/CBaseController.php(95): FacturaController->renderInternal()
+#5 /var/www/yii/framework/web/CController.php(869): FacturaController->renderFile()
+#6 /var/www/yii/framework/web/CController.php(782): FacturaController->renderPartial()
+#7 /var/www/vtv/protected/controllers/FacturaController.php(79): FacturaController->render()
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(49): FacturaController->actionCreate()
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(133): FacturaController->runAction()
+#11 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#13 /var/www/yii/framework/web/filters/CInlineFilter.php(58): FacturaController->filterAccessControl()
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#15 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(265): FacturaController->runActionWithFilters()
+#17 /var/www/yii/framework/web/CWebApplication.php(282): FacturaController->run()
+#18 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#19 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#20 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=factura/create
+in /var/www/vtv/protected/models/Factura.php (35)
+in /var/www/vtv/protected/views/factura/_form.php (57)
+in /var/www/vtv/protected/views/factura/create.php (20)
+2013/09/09 23:06:54 [error] [php] Missing argument 2 for CHtml::listData(), called in /var/www/vtv/protected/models/Factura.php on line 35 and defined (/var/www/yii/framework/web/helpers/CHtml.php:1836)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(126): require()
+#1 /var/www/yii/framework/web/CBaseController.php(95): FacturaController->renderInternal()
+#2 /var/www/yii/framework/web/CController.php(869): FacturaController->renderFile()
+#3 /var/www/vtv/protected/views/factura/create.php(20): FacturaController->renderPartial()
+#4 /var/www/yii/framework/web/CBaseController.php(126): require()
+#5 /var/www/yii/framework/web/CBaseController.php(95): FacturaController->renderInternal()
+#6 /var/www/yii/framework/web/CController.php(869): FacturaController->renderFile()
+#7 /var/www/yii/framework/web/CController.php(782): FacturaController->renderPartial()
+#8 /var/www/vtv/protected/controllers/FacturaController.php(79): FacturaController->render()
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): FacturaController->actionCreate()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(133): FacturaController->runAction()
+#12 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/yii/framework/web/filters/CInlineFilter.php(58): FacturaController->filterAccessControl()
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(265): FacturaController->runActionWithFilters()
+#18 /var/www/yii/framework/web/CWebApplication.php(282): FacturaController->run()
+#19 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=factura/create
+in /var/www/vtv/protected/models/Factura.php (35)
+in /var/www/vtv/protected/views/factura/_form.php (57)
+in /var/www/vtv/protected/views/factura/create.php (20)
+2013/09/09 23:06:55 [error] [php] Missing argument 2 for CHtml::listData(), called in /var/www/vtv/protected/models/Factura.php on line 35 and defined (/var/www/yii/framework/web/helpers/CHtml.php:1836)
+Stack trace:
+#0 /var/www/yii/framework/web/CBaseController.php(126): require()
+#1 /var/www/yii/framework/web/CBaseController.php(95): FacturaController->renderInternal()
+#2 /var/www/yii/framework/web/CController.php(869): FacturaController->renderFile()
+#3 /var/www/vtv/protected/views/factura/create.php(20): FacturaController->renderPartial()
+#4 /var/www/yii/framework/web/CBaseController.php(126): require()
+#5 /var/www/yii/framework/web/CBaseController.php(95): FacturaController->renderInternal()
+#6 /var/www/yii/framework/web/CController.php(869): FacturaController->renderFile()
+#7 /var/www/yii/framework/web/CController.php(782): FacturaController->renderPartial()
+#8 /var/www/vtv/protected/controllers/FacturaController.php(79): FacturaController->render()
+#9 /var/www/yii/framework/web/actions/CInlineAction.php(49): FacturaController->actionCreate()
+#10 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#11 /var/www/yii/framework/web/filters/CFilterChain.php(133): FacturaController->runAction()
+#12 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#14 /var/www/yii/framework/web/filters/CInlineFilter.php(58): FacturaController->filterAccessControl()
+#15 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#16 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /var/www/yii/framework/web/CController.php(265): FacturaController->runActionWithFilters()
+#18 /var/www/yii/framework/web/CWebApplication.php(282): FacturaController->run()
+#19 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#20 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#21 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=factura/create
+in /var/www/vtv/protected/models/Factura.php (35)
+in /var/www/vtv/protected/views/factura/_form.php (57)
+in /var/www/vtv/protected/views/factura/create.php (20)
+2013/09/11 23:44:25 [error] [exception.CException] exception 'CException' with message 'Proveedor and its behaviors do not have a method or closure named "finByPk".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(225): CComponent->__call('finByPk', Array)
+#1 /var/www/vtv/protected/models/Proveedor.php(121): CActiveRecord->__call('finByPk', Array)
+#2 /var/www/vtv/protected/models/Proveedor.php(121): Proveedor->finByPk('idproveedor=$id')
+#3 /var/www/vtv/protected/views/factura/view.php(32): Proveedor::getProveedor('1')
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#8 /var/www/vtv/protected/controllers/FacturaController.php(56): CController->render('view', Array)
+#9 [internal function]: FacturaController->actionView('1')
+#10 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FacturaController), Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FacturaController), Object(ReflectionMethod), Array)
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('factura/view')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/vtv/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/vtv/index.php?r=factura/view&id=1
+HTTP_REFERER=http://localhost/vtv/index.php?r=factura/update&id=1
+---
+2013/09/11 23:44:54 [error] [exception.CException] exception 'CException' with message 'Proveedor and its behaviors do not have a method or closure named "finByPk".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(225): CComponent->__call('finByPk', Array)
+#1 /var/www/vtv/protected/models/Proveedor.php(121): CActiveRecord->__call('finByPk', Array)
+#2 /var/www/vtv/protected/models/Proveedor.php(121): Proveedor->finByPk('"idproveedor"=$...')
+#3 /var/www/vtv/protected/views/factura/view.php(32): Proveedor::getProveedor('1')
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#8 /var/www/vtv/protected/controllers/FacturaController.php(56): CController->render('view', Array)
+#9 [internal function]: FacturaController->actionView('1')
+#10 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FacturaController), Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FacturaController), Object(ReflectionMethod), Array)
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('factura/view')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/vtv/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/vtv/index.php?r=factura/view&id=1
+HTTP_REFERER=http://localhost/vtv/index.php?r=factura/update&id=1
+---
+2013/09/11 23:45:48 [error] [exception.CException] exception 'CException' with message 'Proveedor and its behaviors do not have a method or closure named "finByPk".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(225): CComponent->__call('finByPk', Array)
+#1 /var/www/vtv/protected/models/Proveedor.php(121): CActiveRecord->__call('finByPk', Array)
+#2 /var/www/vtv/protected/models/Proveedor.php(121): Proveedor->finByPk('idproveedor=?', '1')
+#3 /var/www/vtv/protected/views/factura/view.php(32): Proveedor::getProveedor('1')
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#8 /var/www/vtv/protected/controllers/FacturaController.php(56): CController->render('view', Array)
+#9 [internal function]: FacturaController->actionView('1')
+#10 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FacturaController), Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FacturaController), Object(ReflectionMethod), Array)
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('factura/view')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/vtv/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/vtv/index.php?r=factura/view&id=1
+HTTP_REFERER=http://localhost/vtv/index.php?r=factura/update&id=1
+---
+2013/09/11 23:45:49 [error] [exception.CException] exception 'CException' with message 'Proveedor and its behaviors do not have a method or closure named "finByPk".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(225): CComponent->__call('finByPk', Array)
+#1 /var/www/vtv/protected/models/Proveedor.php(121): CActiveRecord->__call('finByPk', Array)
+#2 /var/www/vtv/protected/models/Proveedor.php(121): Proveedor->finByPk('idproveedor=?', '1')
+#3 /var/www/vtv/protected/views/factura/view.php(32): Proveedor::getProveedor('1')
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#8 /var/www/vtv/protected/controllers/FacturaController.php(56): CController->render('view', Array)
+#9 [internal function]: FacturaController->actionView('1')
+#10 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FacturaController), Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FacturaController), Object(ReflectionMethod), Array)
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('factura/view')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/vtv/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/vtv/index.php?r=factura/view&id=1
+HTTP_REFERER=http://localhost/vtv/index.php?r=factura/update&id=1
+---
+2013/09/11 23:47:32 [error] [exception.CException] exception 'CException' with message 'Proveedor and its behaviors do not have a method or closure named "finByPk".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(225): CComponent->__call('finByPk', Array)
+#1 /var/www/vtv/protected/models/Proveedor.php(121): CActiveRecord->__call('finByPk', Array)
+#2 /var/www/vtv/protected/models/Proveedor.php(121): Proveedor->finByPk('1')
+#3 /var/www/vtv/protected/views/factura/view.php(32): Proveedor::getProveedor('1')
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#8 /var/www/vtv/protected/controllers/FacturaController.php(56): CController->render('view', Array)
+#9 [internal function]: FacturaController->actionView('1')
+#10 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FacturaController), Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FacturaController), Object(ReflectionMethod), Array)
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('factura/view')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/vtv/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/vtv/index.php?r=factura/view&id=1
+HTTP_REFERER=http://localhost/vtv/index.php?r=factura/update&id=1
+---
+2013/09/11 23:47:34 [error] [exception.CException] exception 'CException' with message 'Proveedor and its behaviors do not have a method or closure named "finByPk".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(225): CComponent->__call('finByPk', Array)
+#1 /var/www/vtv/protected/models/Proveedor.php(121): CActiveRecord->__call('finByPk', Array)
+#2 /var/www/vtv/protected/models/Proveedor.php(121): Proveedor->finByPk('1')
+#3 /var/www/vtv/protected/views/factura/view.php(32): Proveedor::getProveedor('1')
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#8 /var/www/vtv/protected/controllers/FacturaController.php(56): CController->render('view', Array)
+#9 [internal function]: FacturaController->actionView('1')
+#10 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FacturaController), Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FacturaController), Object(ReflectionMethod), Array)
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('factura/view')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/vtv/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/vtv/index.php?r=factura/view&id=1
+HTTP_REFERER=http://localhost/vtv/index.php?r=factura/update&id=1
+---
+2013/09/11 23:47:35 [error] [exception.CException] exception 'CException' with message 'Proveedor and its behaviors do not have a method or closure named "finByPk".' in /var/www/yii/framework/base/CComponent.php:265
+Stack trace:
+#0 /var/www/yii/framework/db/ar/CActiveRecord.php(225): CComponent->__call('finByPk', Array)
+#1 /var/www/vtv/protected/models/Proveedor.php(121): CActiveRecord->__call('finByPk', Array)
+#2 /var/www/vtv/protected/models/Proveedor.php(121): Proveedor->finByPk('1')
+#3 /var/www/vtv/protected/views/factura/view.php(32): Proveedor::getProveedor('1')
+#4 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#5 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#6 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#7 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#8 /var/www/vtv/protected/controllers/FacturaController.php(56): CController->render('view', Array)
+#9 [internal function]: FacturaController->actionView('1')
+#10 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(FacturaController), Array)
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(FacturaController), Object(ReflectionMethod), Array)
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('factura/view')
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/vtv/index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/vtv/index.php?r=factura/view&id=1
+HTTP_REFERER=http://localhost/vtv/index.php?r=factura/update&id=1
+---
+2013/09/11 23:47:45 [error] [php] htmlspecialchars() expects parameter 1 to be string, object given (/var/www/yii/framework/web/helpers/CHtml.php:98)
+Stack trace:
+#0 /var/www/yii/framework/utils/CFormatter.php(124): CFormatter->formatText()
+#1 /var/www/yii/framework/zii/widgets/CDetailView.php(215): CFormatter->format()
+#2 /var/www/yii/framework/web/CBaseController.php(173): CDetailView->run()
+#3 /var/www/vtv/protected/views/factura/view.php(39): FacturaController->widget()
+#4 /var/www/yii/framework/web/CBaseController.php(126): require()
+#5 /var/www/yii/framework/web/CBaseController.php(95): FacturaController->renderInternal()
+#6 /var/www/yii/framework/web/CController.php(869): FacturaController->renderFile()
+#7 /var/www/yii/framework/web/CController.php(782): FacturaController->renderPartial()
+#8 /var/www/vtv/protected/controllers/FacturaController.php(56): FacturaController->render()
+#9 unknown(0): FacturaController->actionView()
+#10 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): FacturaController->runAction()
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): FacturaController->filterAccessControl()
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): FacturaController->runActionWithFilters()
+#20 /var/www/yii/framework/web/CWebApplication.php(282): FacturaController->run()
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=factura/view&id=1
+in /var/www/vtv/protected/views/factura/view.php (39)
+in /var/www/vtv/protected/controllers/FacturaController.php (56)
+in /var/www/vtv/index.php (13)
+2013/09/11 23:48:37 [error] [php] htmlspecialchars() expects parameter 1 to be string, object given (/var/www/yii/framework/web/helpers/CHtml.php:98)
+Stack trace:
+#0 /var/www/yii/framework/utils/CFormatter.php(124): CFormatter->formatText()
+#1 /var/www/yii/framework/zii/widgets/CDetailView.php(215): CFormatter->format()
+#2 /var/www/yii/framework/web/CBaseController.php(173): CDetailView->run()
+#3 /var/www/vtv/protected/views/factura/view.php(39): FacturaController->widget()
+#4 /var/www/yii/framework/web/CBaseController.php(126): require()
+#5 /var/www/yii/framework/web/CBaseController.php(95): FacturaController->renderInternal()
+#6 /var/www/yii/framework/web/CController.php(869): FacturaController->renderFile()
+#7 /var/www/yii/framework/web/CController.php(782): FacturaController->renderPartial()
+#8 /var/www/vtv/protected/controllers/FacturaController.php(56): FacturaController->render()
+#9 unknown(0): FacturaController->actionView()
+#10 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): FacturaController->runAction()
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): FacturaController->filterAccessControl()
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): FacturaController->runActionWithFilters()
+#20 /var/www/yii/framework/web/CWebApplication.php(282): FacturaController->run()
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=factura/view&id=1
+in /var/www/vtv/protected/views/factura/view.php (39)
+in /var/www/vtv/protected/controllers/FacturaController.php (56)
+in /var/www/vtv/index.php (13)
+2013/09/11 23:49:23 [error] [php] htmlspecialchars() expects parameter 1 to be string, object given (/var/www/yii/framework/web/helpers/CHtml.php:98)
+Stack trace:
+#0 /var/www/yii/framework/utils/CFormatter.php(124): CFormatter->formatText()
+#1 /var/www/yii/framework/zii/widgets/CDetailView.php(215): CFormatter->format()
+#2 /var/www/yii/framework/web/CBaseController.php(173): CDetailView->run()
+#3 /var/www/vtv/protected/views/factura/view.php(39): FacturaController->widget()
+#4 /var/www/yii/framework/web/CBaseController.php(126): require()
+#5 /var/www/yii/framework/web/CBaseController.php(95): FacturaController->renderInternal()
+#6 /var/www/yii/framework/web/CController.php(869): FacturaController->renderFile()
+#7 /var/www/yii/framework/web/CController.php(782): FacturaController->renderPartial()
+#8 /var/www/vtv/protected/controllers/FacturaController.php(56): FacturaController->render()
+#9 unknown(0): FacturaController->actionView()
+#10 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#11 /var/www/yii/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#12 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#13 /var/www/yii/framework/web/filters/CFilterChain.php(133): FacturaController->runAction()
+#14 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#15 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#16 /var/www/yii/framework/web/filters/CInlineFilter.php(58): FacturaController->filterAccessControl()
+#17 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#18 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#19 /var/www/yii/framework/web/CController.php(265): FacturaController->runActionWithFilters()
+#20 /var/www/yii/framework/web/CWebApplication.php(282): FacturaController->run()
+#21 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#22 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#23 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=factura/view&id=1
+in /var/www/vtv/protected/views/factura/view.php (39)
+in /var/www/vtv/protected/controllers/FacturaController.php (56)
+in /var/www/vtv/index.php (13)
+2013/09/12 00:23:36 [error] [php] include(Inactivo.php): failed to open stream: No such file or directory (/var/www/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 /var/www/yii/framework/base/CComponent.php(611): call_user_func_array()
+#2 /var/www/yii/framework/zii/widgets/grid/CDataColumn.php(131): CDataColumn->evaluateExpression()
+#3 /var/www/yii/framework/zii/widgets/grid/CGridColumn.php(144): CDataColumn->renderDataCellContent()
+#4 /var/www/yii/framework/zii/widgets/grid/CGridView.php(589): CDataColumn->renderDataCell()
+#5 /var/www/yii/framework/zii/widgets/grid/CGridView.php(545): CGridView->renderTableRow()
+#6 /var/www/yii/framework/zii/widgets/grid/CGridView.php(455): CGridView->renderTableBody()
+#7 /var/www/yii/framework/zii/widgets/CBaseListView.php(160): CGridView->renderItems()
+#8 unknown(0): CGridView->renderSection()
+#9 /var/www/yii/framework/zii/widgets/CBaseListView.php(143): preg_replace_callback()
+#10 /var/www/yii/framework/zii/widgets/CBaseListView.php(128): CGridView->renderContent()
+#11 /var/www/yii/framework/web/CBaseController.php(173): CGridView->run()
+#12 /var/www/vtv/protected/views/factura/admin.php(68): FacturaController->widget()
+#13 /var/www/yii/framework/web/CBaseController.php(126): require()
+#14 /var/www/yii/framework/web/CBaseController.php(95): FacturaController->renderInternal()
+#15 /var/www/yii/framework/web/CController.php(869): FacturaController->renderFile()
+#16 /var/www/yii/framework/web/CController.php(782): FacturaController->renderPartial()
+#17 /var/www/vtv/protected/controllers/FacturaController.php(147): FacturaController->render()
+#18 /var/www/yii/framework/web/actions/CInlineAction.php(49): FacturaController->actionAdmin()
+#19 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#20 /var/www/yii/framework/web/filters/CFilterChain.php(133): FacturaController->runAction()
+#21 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#22 /var/www/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#23 /var/www/yii/framework/web/filters/CInlineFilter.php(58): FacturaController->filterAccessControl()
+#24 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#25 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#26 /var/www/yii/framework/web/CController.php(265): FacturaController->runActionWithFilters()
+#27 /var/www/yii/framework/web/CWebApplication.php(282): FacturaController->run()
+#28 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#29 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#30 /var/www/vtv/index.php(13): CWebApplication->run()
+REQUEST_URI=/vtv/index.php?r=factura/admin
+in /var/www/vtv/protected/views/factura/admin.php (68)
+in /var/www/vtv/protected/controllers/FacturaController.php (147)
+in /var/www/vtv/index.php (13)
+2013/09/13 20:13:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "gii".' in /var/www/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www/yii/framework/web/CController.php(270): CController->missingAction('gii')
+#1 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('gii')
+#2 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/gii')
+#3 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#4 /var/www/vtv/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vtv/index.php?r=site/gii
+---
+2013/09/18 22:25:47 [error] [exception.CException] exception 'CException' with message 'Property "CAuthItem.id" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/vtv/protected/views/usuario/view.php(74): CComponent->__get('id')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#5 /var/www/vtv/protected/controllers/UsuarioController.php(63): CController->render('view', Array)
+#6 [internal function]: UsuarioController->actionView('1')
+#7 /var/www/yii/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(UsuarioController), Array)
+#8 /var/www/yii/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UsuarioController), Object(ReflectionMethod), Array)
+#9 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#16 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#18 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('usuario/view')
+#19 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#20 /var/www/vtv/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/vtv/index.php?r=usuario/view&id=1
+HTTP_REFERER=http://localhost/vtv/index.php?r=usuario/admin
+---
+2013/09/21 19:57:12 [error] [exception.CException] exception 'CException' with message 'Property "BolsinController.bolsines" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/vtv/protected/views/bolsin/index.php(25): CComponent->__get('bolsines')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#5 /var/www/vtv/protected/controllers/BolsinController.php(130): CController->render('index', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): BolsinController->actionIndex()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bolsin')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/vtv/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vtv/index.php?r=bolsin
+HTTP_REFERER=http://localhost/vtv/index.php?r=bolsin
+---
+2013/09/21 19:57:12 [error] [exception.CException] exception 'CException' with message 'Property "BolsinController.bolsines" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/vtv/protected/views/bolsin/index.php(25): CComponent->__get('bolsines')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#5 /var/www/vtv/protected/controllers/BolsinController.php(130): CController->render('index', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): BolsinController->actionIndex()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bolsin')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/vtv/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vtv/index.php?r=bolsin
+HTTP_REFERER=http://localhost/vtv/index.php?r=bolsin
+---
+2013/09/21 19:57:13 [error] [exception.CException] exception 'CException' with message 'Property "BolsinController.bolsines" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/vtv/protected/views/bolsin/index.php(25): CComponent->__get('bolsines')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#5 /var/www/vtv/protected/controllers/BolsinController.php(130): CController->render('index', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): BolsinController->actionIndex()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bolsin')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/vtv/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vtv/index.php?r=bolsin
+HTTP_REFERER=http://localhost/vtv/index.php?r=bolsin
+---
+2013/09/21 19:57:13 [error] [exception.CException] exception 'CException' with message 'Property "BolsinController.bolsines" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/vtv/protected/views/bolsin/index.php(25): CComponent->__get('bolsines')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#5 /var/www/vtv/protected/controllers/BolsinController.php(130): CController->render('index', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): BolsinController->actionIndex()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bolsin')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/vtv/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vtv/index.php?r=bolsin
+HTTP_REFERER=http://localhost/vtv/index.php?r=bolsin
+---
+2013/09/21 19:57:13 [error] [exception.CException] exception 'CException' with message 'Property "BolsinController.bolsines" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/vtv/protected/views/bolsin/index.php(25): CComponent->__get('bolsines')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#5 /var/www/vtv/protected/controllers/BolsinController.php(130): CController->render('index', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): BolsinController->actionIndex()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bolsin')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/vtv/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vtv/index.php?r=bolsin
+HTTP_REFERER=http://localhost/vtv/index.php?r=bolsin
+---
+2013/09/21 19:57:14 [error] [exception.CException] exception 'CException' with message 'Property "BolsinController.bolsines" is not defined.' in /var/www/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/vtv/protected/views/bolsin/index.php(25): CComponent->__get('bolsines')
+#1 /var/www/yii/framework/web/CBaseController.php(126): require('/var/www/vtv/pr...')
+#2 /var/www/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/vtv/pr...', Array, true)
+#3 /var/www/yii/framework/web/CController.php(869): CBaseController->renderFile('/var/www/vtv/pr...', Array, true)
+#4 /var/www/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#5 /var/www/vtv/protected/controllers/BolsinController.php(130): CController->render('index', Array)
+#6 /var/www/yii/framework/web/actions/CInlineAction.php(49): BolsinController->actionIndex()
+#7 /var/www/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /var/www/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /var/www/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /var/www/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /var/www/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /var/www/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /var/www/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /var/www/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/yii/framework/web/CWebApplication.php(282): CController->run('')
+#16 /var/www/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('bolsin')
+#17 /var/www/yii/framework/base/CApplication.php(169): CWebApplication->processRequest()
+#18 /var/www/vtv/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vtv/index.php?r=bolsin
+HTTP_REFERER=http://localhost/vtv/index.php?r=bolsin
+---

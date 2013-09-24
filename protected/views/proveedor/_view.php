@@ -3,8 +3,7 @@
 /* @var $data Proveedor */
 ?>
 
-<div class="view">
-
+<div class="content well well-small">	
 	<b><?php echo CHtml::encode($data->getAttributeLabel('idproveedor')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->idproveedor), array('view', 'id'=>$data->idproveedor)); ?>
 	<br />
@@ -28,6 +27,4 @@
 	<b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
 	<?php echo CHtml::encode(Proveedor::getEstado($data->estado)); ?>
 	<br />
-
-
 </div>

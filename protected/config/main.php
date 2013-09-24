@@ -7,8 +7,8 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Documentacion de Facturas y Documentos',
-	'theme'=>'classic',
+	'name'=>'Documentacion de Facturas y Envios',
+	'theme'=>'bootstrap',
 
 	// preloading 'log' component
 	'preload'=>array('log'),

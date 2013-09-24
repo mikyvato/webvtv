@@ -9,6 +9,7 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Destinatario', 'url'=>array('index')),
+	array('label'=>'/'),
 	array('label'=>'Create Destinatario', 'url'=>array('create')),
 );
 
@@ -25,7 +26,8 @@ $('.search-form form').submit(function(){
 });
 ");
 ?>
-
+<div class="span2">&nbsp;</div>
+<div class="span8">
 <h1>Manage Destinatarios</h1>
 
 <p>
@@ -64,3 +66,4 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		),
 	),
 )); ?>
+</div>

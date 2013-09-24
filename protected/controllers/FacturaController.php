@@ -70,6 +70,7 @@ class FacturaController extends Controller
 		if(isset($_POST['Factura']))
 		{
 			$model->attributes=$_POST['Factura'];
+			$model->fecha = Factura::dateUpdate($model->fecha,1);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idfactura));
 		}
@@ -94,10 +95,13 @@ class FacturaController extends Controller
 		if(isset($_POST['Factura']))
 		{
 			$model->attributes=$_POST['Factura'];
+			$model->fecha = Factura::dateUpdate($model->fecha,1);
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idfactura));
 		}
 
+
+		$model->fecha = Factura::dateUpdate($model->fecha,2);
 		$this->render('update',array(
 			'model'=>$model,
 		));

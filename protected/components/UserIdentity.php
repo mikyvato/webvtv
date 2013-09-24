@@ -26,6 +26,7 @@ class UserIdentity extends CUserIdentity
 		  $this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else{
 			$this->_id=$user->idUsuario;
+			//$this->_name=$user->nombre.', '.$user->apellido;
 			$this->username=$user->username;
 			$this->errorCode=self::ERROR_NONE;
 
@@ -46,4 +47,5 @@ class UserIdentity extends CUserIdentity
 	{
 		return $this->_id;
 	}
+
 }

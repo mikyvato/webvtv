@@ -13,28 +13,29 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($model,null,null,array('class'=>'alert alert-error')); ?>
 
-	<div class="">
+	<div class="well">
 		<?php echo $form->labelEx($model,'descripcion'); ?>
 		<?php echo $form->textField($model,'descripcion',array('size'=>60,'maxlength'=>120)); ?>
 		<?php echo $form->error($model,'descripcion'); ?>
-	</div>
+	
 
-	<div class="">
+	
 		<?php echo $form->labelEx($model,'recFactura'); ?>
 		<?php echo $form->dropDownList($model,'recFactura',array('0'=>'No','1'=>'SI')); ?>
 		<?php echo $form->error($model,'recFactura'); ?>
-	</div>
+	
 
-	<div class="">
+	
 		<?php echo $form->labelEx($model,'estado'); ?>
 		<?php echo $form->dropDownList($model,'estado',array('0'=>'Dasactivado','1'=>'Habilitado')); ?>
 		<?php echo $form->error($model,'estado'); ?>
-	</div>
+	
 
-	<div class="buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array("class"=>"btn-primary")); ?>
+	<br>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array("class"=>"btn-primary btn-large")); ?>
+	
 	</div>
 
 <?php $this->endWidget(); ?>

@@ -13,41 +13,37 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($model,null,null,array('class'=>'alert alert-error')); ?>
 
-	<div class="row">
+<div class="content">
+<div class="row-fluid">
+	<div class="well">
 		<?php echo $form->labelEx($model,'nombre'); ?>
 		<?php echo $form->textField($model,'nombre',array('size'=>60,'maxlength'=>120)); ?>
 		<?php echo $form->error($model,'nombre'); ?>
-	</div>
-
-	<div class="row">
+	
 		<?php echo $form->labelEx($model,'apellido'); ?>
 		<?php echo $form->textField($model,'apellido',array('size'=>60,'maxlength'=>120)); ?>
 		<?php echo $form->error($model,'apellido'); ?>
-	</div>
-
-	<div class="row">
+	
 		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>120)); ?>
+		<?php echo $form->emailField($model,'email',array('size'=>60,'maxlength'=>120)); ?>
 		<?php echo $form->error($model,'email'); ?>
-	</div>
-
-	<div class="row">
+	
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username',array('size'=>40,'maxlength'=>40)); ?>
 		<?php echo $form->error($model,'username'); ?>
-	</div>
-
-	<div class="row">
+	
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>180)); ?>
 		<?php echo $form->error($model,'password'); ?>
-	</div>
+	<div class="pull-right">
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array("class"=>"btn-primary btn-large")); ?>
 	</div>
+	</div>
+</div>
+</div>
 
 <?php $this->endWidget(); ?>
 

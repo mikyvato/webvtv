@@ -9,73 +9,87 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Usuario', 'url'=>array('index')),
-	array('label'=>'Create Usuario', 'url'=>array('create')),
+	array('label'=>'/'),
 	array('label'=>'Update Usuario', 'url'=>array('update', 'id'=>$model->idUsuario)),
-	array('label'=>'Delete Usuario', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idUsuario),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Usuario', 'url'=>array('admin')),
 );
 ?>
+<div class="content">
+	<div class="row-fluid">
+    	<div class="span2">&nbsp;</div>
+		<div class="span8">
+			<legend><h1>View Usuario #<?php echo $model->idUsuario; ?></h1></legend>
 
-<h1>View Usuario #<?php echo $model->idUsuario; ?></h1>
+			<?php $this->widget('zii.widgets.CDetailView', array(
+				'data'=>$model,
+				'attributes'=>array(
+					'idUsuario',
+					'nombre',
+					'apellido',
+					'email',
+					'created_at',
+					'last_login',
+					'username',
+				),
+			)); ?>
+		</div>
+		<div class="span2">&nbsp;</div>
 
-<?php $this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'idUsuario',
-		'nombre',
-		'apellido',
-		'email',
-		'created_at',
-		'last_login',
-		'username',
-		'password',
-	),
-)); ?>
+	    <div class="span12">
+	    	<div class="span1">&nbsp;</div>
+	        <div class="span3">	
+				<?php 
+				echo "<legend><h1>Create Role</h1></legend>";
 
-<div class="row-fluid">
-<div class="span6">	
+				echo "<div class='well'>";
+   				$form=$this->beginWidget("CActiveForm"); 
+   				echo $form->labelEx($role,"name"); 
+   				echo $form->textField($role,"name");
+   				echo $form->error($role,"name"); 
+   				echo $form->labelEx($role,"description");
+   				echo $form->textArea($role,"description");
+   				echo $form->error($role,"description")."<br>";
 
-<?php 
-echo "<h1>Create Role</h1>";
-   
-$form=$this->beginWidget("CActiveForm"); 
+				echo CHtml::submitButton("Create",array("class"=>"btn btn-primary"));
 
-echo $form->labelEx($role,"name"); 
-echo $form->textField($role,"name");
-echo $form->error($role,"name"); 
+				$this->endWidget(); 
+				echo "</div>";
+				?>
+			</div>
 
-echo $form->labelEx($role,"description");
-echo $form->textArea($role,"description");
-echo $form->error($role,"description")."<br>";
+			<div class="span1">&nbsp;</div>
 
-echo CHtml::submitButton("Create",array("class"=>"btn btn-primary"));
+			<div class="span5">
+			<div class="span5"><br><br><br><br></div>
+				<table class="table table-condensed table-hover">
+					<tr class="success">
+				    	<td>#</td>
+				    	<td> Nombre del Rol </td>
+				    	<td> Estado </td>
+				    	<td> Descripcion </td>
+				    	<td> Acción  </td>
+					</tr>
+					<?php
+					$i = 1;
+					foreach (Yii::app()->authManager->getAuthItems() as $data ):
+		    			$enabled = Yii::app()->authManager->checkAccess($data->name,$model->idUsuario); ?>
+						<tr>
+							<td> <?php echo $i; ?></td>
+							<td> <?php echo $data->name; ?> </td>
+							<td> <?php echo $enabled ? '<span class="label label-success">Activo</span>' : '';?> </td>
+							<td> <?php echo $data->description; ?> </td>
+							<td>
+		    				<?php 
+		       					echo CHtml::link( $enabled ? "Desactivar" : "Activar",array("usuario/assign","id"=>$model->idUsuario,"item"=>$data->name),array("class"=>$enabled ? "btn btn-primary" : "btn"));
+		       					$i++;
+		       				?>
+		       				</td>							
+		       				
+		   				
+						</tr>
 
-$this->endWidget(); 
-
-?>
-</div>
-
-<div class="span6">
-	<ul class="nav nav-tabs nav-stacked">
-		<?php
-		foreach (Yii::app()->authManager->getAuthItems() as $data ):
-		    $enabled = Yii::app()->authManager->checkAccess($data->name,$model->idUsuario); ?>
-			<li>
-				<a href="#">
-				<span class="label label-important">
-					<?php if ($data->type == 0) echo "Role";?>
-					<?php if ($data->type == 1) echo "Tarea";?>
-					<?php if ($data->type == 2) echo "Rol    "; echo $enabled ? '<span class="label label-success">Activo</span>' : '';?>
-				</span>
-				<h4><?php echo $data->name; ?>
-				</h4>
-		    	<?php 
-		       		echo CHtml::link( $enabled ? "Off" : "On",array("usuario/assign","id"=>$model->idUsuario,"item"=>$data->name),array("class"=>$enabled ? "btn btn-primary" : "btn"));
-		       		echo $enabled ? "<span>Enabled</span>" : ""; 
-		       		echo '<p>'.$data->description.'</p>'; ?>
-		   		</a>
-			</li>
-		<?php endforeach; ?>
-	</ul>
-</div>
+					<?php endforeach; ?>
+				</table>
+			</div>
+		</div>
+	</div>
 </div>

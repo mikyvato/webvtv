@@ -10,12 +10,14 @@ $this->breadcrumbs=array(
 
 $this->menu=array(
 	array('label'=>'List Documento', 'url'=>array('index')),
-	array('label'=>'Create Documento', 'url'=>array('create')),
-	array('label'=>'View Documento', 'url'=>array('view', 'id'=>$model->iddocumento)),
+	array('label'=>'/'),
 	array('label'=>'Manage Documento', 'url'=>array('admin')),
 );
 ?>
 
+<div class="span3">&nbsp;</div>
+<div class="span7">
 <h1>Update Documento <?php echo $model->iddocumento; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+</div>

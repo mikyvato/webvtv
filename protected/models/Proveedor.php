@@ -113,6 +113,12 @@ class Proveedor extends CActiveRecord
 
 	public static function getListProveedor ()
     {
-            return CHtml::listData(Proveedro::model()->findAll('estado=1'),'idproveedor','nombre');
+            return CHtml::listData(Proveedor::model()->findAll('estado=1'),'idproveedor','nombre');
+    }
+
+    public static function getProveedor ($id)
+    {
+    	$prov = Proveedor::model()->findByPk($id);
+    	return $prov->nombre;
     }
 }

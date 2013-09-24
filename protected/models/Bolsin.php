@@ -16,6 +16,15 @@
  */
 class Bolsin extends CActiveRecord
 {
+	public static $estado = array('0'=>'Anulado','1'=>'Activo','2'=>'Enviado');
+
+	public static function getEstado($key=null)
+        {
+            if ($key !== null)
+                return self::$estado[$key];
+            return self::$estado;
+        }
+        
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -74,7 +83,7 @@ class Bolsin extends CActiveRecord
 			'fecha' => 'Fecha',
 			'observacion' => 'Observacion',
 			'estado' => 'Estado',
-			'usuario_idUsuario' => 'Usuario Id Usuario',
+			'usuario_idUsuario' => 'Usuario Responsable',
 		);
 	}
 

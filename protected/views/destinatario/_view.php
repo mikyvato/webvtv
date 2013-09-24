@@ -3,7 +3,7 @@
 /* @var $data Destinatario */
 ?>
 
-<div class="view">
+<div class="well well-small">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('iddestinatario')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->iddestinatario), array('view', 'id'=>$data->iddestinatario)); ?>
