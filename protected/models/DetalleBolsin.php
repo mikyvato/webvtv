@@ -76,10 +76,10 @@ class DetalleBolsin extends CActiveRecord
 	{
 		return array(
 			'iddetalleBolsin' => 'Iddetalle Bolsin',
-			'bolsin_idbolsin' => 'Bolsin Idbolsin',
-			'destinatario_iddestinatario' => 'Destinatario Iddestinatario',
-			'documento_iddocumento' => 'Documento Iddocumento',
-			'factura_idfactura' => 'Factura Idfactura',
+			'bolsin_idbolsin' => 'Bolsin Nro',
+			'destinatario_iddestinatario' => 'Destinatario',
+			'documento_iddocumento' => 'Documento Tipo',
+			'factura_idfactura' => 'Factura',
 			'observacion' => 'Observacion',
 		);
 	}

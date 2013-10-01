@@ -126,7 +126,11 @@ class FacturaController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Factura');
+		$dataProvider=new CActiveDataProvider('Factura', array('criteria'=>array(
+        	'order'=>'estado DESC',
+            ),
+			));
+
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));

@@ -27,17 +27,13 @@ class BolsinController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'actions'=>array('create','update','index','view','admin','assign','deleteField'),
+				'roles'=>array('Admin','Operador'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'roles'=>array('Admin'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -51,11 +47,44 @@ class BolsinController extends Controller
 	 */
 	public function actionView($id)
 	{
+		if(isset($_POST['DetalleBolsin']))
+		{
+			$modelDet=new DetalleBolsin;
+			$modelDet->attributes=$_POST['DetalleBolsin'];
+			if ($modelDet->factura_idfactura > 0){
+				$fac = Factura::model()->findByPk($modelDet->factura_idfactura);
+				$fac->estado = 0;
+				if (!$fac->save())
+					throw new CHttpException(404,'Error al guardar los datos de Factura');	
+			}
+			if(!$modelDet->save())
+				throw new CHttpException(404,'Error al guardar los datos del detalle');
+		}
+
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'model'=> $this->loadModel($id),
+			'det'=> $this->loadDetail($id,1),
+			'fac'=> $this->loadDetail($id,3),
+			'detForm'=> new DetalleBolsin,
 		));
 	}
 
+	public function actionEnviar(){
+		$model = loadModel($id);
+		$model->estado = 2;
+
+		$model->save();
+
+		$dataProvider=new CActiveDataProvider('Bolsin', array('criteria'=>array(
+			'condition'=>'estado > 0',
+        	'order'=>'estado DESC',
+            ),
+			));
+
+		$this->render('index',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -108,15 +137,31 @@ class BolsinController extends Controller
 	/**
 	 * Deletes a particular model.
 	 * If deletion is successful, the browser will be redirected to the 'admin' page.
-	 * @param integer $id the ID of the model to be deleted
 	 */
-	public function actionDelete($id)
+	public function actionDeleteField()
 	{
-		$this->loadModel($id)->delete();
+        if(isset($_POST['id']) && isset($_POST['ajax']) && $_POST['ajax']=='delete')
+        {                       
+        	$detalle = $this->loadDetail($_POST['id'],2);
 
-		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
-		if(!isset($_GET['ajax']))
-			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+        	$idBolsin = $detalle->bolsin_idbolsin;
+
+        	if ($detalle->factura_idfactura > 0){
+        		$fact = Factura::model()->findByPk($detalle->factura_idfactura);
+				$fact->estado = 1;
+				$fact->save();
+        	}
+
+        	$detalle->delete();
+
+        	$det = $this->loadDetail($idBolsin,1);
+			$fac = $this->loadDetail($idBolsin,3);
+
+        	// pass parent Item back into _itemFields, fourth param set to refresh scripts
+        	$this->renderPartial('_listDetalle', array('detalle'=>$det, 'fac'=>$fac));
+
+        	Yii::app()->end();
+        }
 	}
 
 	/**
@@ -124,8 +169,11 @@ class BolsinController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$this->layout='//layouts/options3';
-		$dataProvider=new CActiveDataProvider('Bolsin');
+		$dataProvider=new CActiveDataProvider('Bolsin', array('criteria'=>array(
+			'condition'=>'estado > 0',
+        	'order'=>'estado DESC',
+            ),
+			));
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -159,6 +207,19 @@ class BolsinController extends Controller
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
+	}
+
+	public function loadDetail($id,$type)
+	{
+		if ($type == 1)
+		    $det=DetalleBolsin::model()->findAll('bolsin_idbolsin=:idBolsin AND documento_iddocumento <> 1',array(':idBolsin'=>$id));
+		if ($type == 2)
+			$det=DetalleBolsin::model()->findByPk($id);
+		if ($type == 3)
+			$det=DetalleBolsin::model()->findAll('bolsin_idbolsin=:idBolsin AND documento_iddocumento = 1',array(':idBolsin'=>$id));
+		if($det===null)
+			$det = new DetalleBolsin; 
+		return $det;
 	}
 
 	/**

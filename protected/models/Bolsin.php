@@ -16,7 +16,7 @@
  */
 class Bolsin extends CActiveRecord
 {
-	public static $estado = array('0'=>'Anulado','1'=>'Activo','2'=>'Enviado');
+	public static $estado = array('0'=>'Anulado','1'=>'Enviado','2'=>'Activo');
 
 	public static function getEstado($key=null)
         {
@@ -79,7 +79,7 @@ class Bolsin extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'idbolsin' => 'Idbolsin',
+			'idbolsin' => 'Bolsin Nro',
 			'fecha' => 'Fecha',
 			'observacion' => 'Observacion',
 			'estado' => 'Estado',

@@ -32,7 +32,7 @@
 		<?php echo $form->error($model,'observacion'); ?>
 	
 		<?php echo $form->labelEx($model,'estado'); ?>
-		<?php echo $form->dropDownList($model,'estado',array('1'=>'Activo')); ?>
+		<?php echo $form->dropDownList($model,'estado',Bolsin::getEstado()); ?>
 		<?php echo $form->error($model,'estado'); ?>
 	
 		<?php echo $form->hiddenField($model,'usuario_idUsuario',array('value'=>Yii::app()->user->id)); ?>

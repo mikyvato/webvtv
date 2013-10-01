@@ -16,6 +16,7 @@
  * @property DetalleBolsin[] $detalleBolsins
  * @property Proveedor $proveedorIdproveedor
  */
+
 class Factura extends CActiveRecord
 {
 	public static $estado = array('0'=>'Inactivo','1'=>'Activo');
@@ -153,4 +154,9 @@ class Factura extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public static function getListFactura ()
+    {
+            return CHtml::listData(Factura::model()->findAll('estado=1'),'idfactura','numero');
+    }
 }

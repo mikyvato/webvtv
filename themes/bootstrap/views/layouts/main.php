@@ -17,7 +17,7 @@
 <div class="navbar navbar-static-top navbar-inverse">
 	<div class="navbar-inner" >
 		<div class="container">
-			
+			<a class="brand" href="#"><img border="1" align="center" height="35" width="115" src="img/index.jpg"></a>
 	      	<a class="brand"><?php echo CHtml::encode(Yii::app()->name); ?></a>
 	      	<div class="nav-collapse collapse pull-right">
 	      		<?php 
@@ -49,12 +49,12 @@
           'htmlOptions'=>array("class"=>"nav"),
           'items'=>array(
             array('label'=>'Home', 'url'=>array('/site/index')),
-            array('label'=>'Usuarios', 'url'=>array('/usuario'),'visible'=>$usuario),
-            array('label'=>'Bolsin', 'url'=>array('/bolsin'),'visible'=>$bolsin),
-            array('label'=>'Destinatarios', 'url'=>array('/destinatario'),'visible'=>$destinatario),
-            array('label'=>'Facturas', 'url'=>array('/factura'),'visible'=>$factura),
-            array('label'=>'Proveedores', 'url'=>array('/proveedor'),'visible'=>$proveedor),
-            array('label'=>'Documentos', 'url'=>array('/documento'),'visible'=>$documento),
+            array('label'=>'Usuarios', 'url'=>array('/usuario/index'),'visible'=>$usuario),
+            array('label'=>'Bolsin', 'url'=>array('/bolsin/index'),'visible'=>$bolsin),
+            array('label'=>'Destinatarios', 'url'=>array('/destinatario/index'),'visible'=>$destinatario),
+            array('label'=>'Facturas', 'url'=>array('/factura/index'),'visible'=>$factura),
+            array('label'=>'Proveedores', 'url'=>array('/proveedor/index'),'visible'=>$proveedor),
+            array('label'=>'Documentos', 'url'=>array('/documento/index'),'visible'=>$documento),
             array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
             array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
           ),
@@ -62,7 +62,7 @@
 	      	</div> 		
 		</div>
 	</div>
-
+<div class="row-fluid" style="background-color:#82e222">&nbsp;</div>
 	<div class="row-fluid">
 		<div class="span12">
 			<?php 
@@ -78,20 +78,20 @@
 	<?php echo $content; ?>
 	
 
-	<footer class="span12">
-		<div class="row-fluid">
+	<footer class="span12" >
+		<div class="row-fluid well">
 		    <div class="span3">&nbsp;</div>
 			<div id="footer" class="span6">
 				<p class="lead text-center">
-				Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+				VTV - &copy; <?php echo date('Y'); ?> Verificaci&oacute;n T&eacute;cnica Vehicular.<br/>
 				All Rights Reserved.<br/>
-				<?php echo Yii::powered(); ?>
+				
 				</p>
 			</div><!-- footer -->
 		</div>
 	</footer>
 
 </div><!-- page -->
-
+<!--script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/bootstrap.js"></script-->
 </body>
 </html>

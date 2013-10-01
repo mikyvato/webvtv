@@ -1,6 +1,12 @@
 <?php
 /* @var $this FacturaController */
 /* @var $data Factura */
+if ($data->estado == 1){
+	$alert = 'success';
+}
+if ($data->estado == 0){
+	$alert = '';
+}
 ?>
 
 <div class="well well-small">
@@ -32,12 +38,14 @@
 		<?php echo CHtml::encode($data->observacion); ?>
 		<br />
 
-		<b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
-		<?php echo CHtml::encode(Factura::getEstado($data->estado)); ?>
-		<br />
-
 		<b><?php echo CHtml::encode($data->getAttributeLabel('proveedor_idproveedor')); ?>:</b>
 		<?php echo CHtml::encode(Proveedor::getProveedor($data->proveedor_idproveedor)); ?>
+		<br />
+
+		<b><?php echo CHtml::encode($data->getAttributeLabel('estado')); ?>:</b>
+		<span class="label label-<?php echo $alert; ?>">
+		<?php echo CHtml::encode(Factura::getEstado($data->estado)); ?>
+		</span>
 		<br />
 	</div>
 
