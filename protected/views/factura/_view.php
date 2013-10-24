@@ -23,7 +23,7 @@ if ($data->estado == 0){
 		<br />
 
 		<b><?php echo CHtml::encode($data->getAttributeLabel('fecha')); ?>:</b>
-		<?php echo CHtml::encode(Factura::dateUpdate($data->fecha,2)); ?>
+		<?php echo CHtml::encode( Yii::app()->dateFormatter->format("dd/MM/y", strtotime($data->fecha))); ?>
 		<br />
 
 		<b><?php echo CHtml::encode($data->getAttributeLabel('monto')); ?>:</b>

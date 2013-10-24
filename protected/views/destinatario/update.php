@@ -9,14 +9,14 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Destinatario', 'url'=>array('index')),
+	array('label'=>'Listar Destinatario', 'url'=>array('index')),
 	array('label'=>'/'),
-	array('label'=>'Manage Destinatario', 'url'=>array('admin')),
+	array('label'=>'Administrar Destinatario', 'url'=>array('admin')),
 );
 ?>
 <div class="span3">&nbsp;</div>
 <div class="span7">
-<h1>Update Destinatario <?php echo $model->iddestinatario; ?></h1>
+<h1>Modificar Destinatario <?php echo $model->iddestinatario; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
 </div>

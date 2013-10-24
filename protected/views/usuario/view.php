@@ -8,16 +8,16 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Usuario', 'url'=>array('index')),
+	array('label'=>'Listar Usuarios', 'url'=>array('index')),
 	array('label'=>'/'),
-	array('label'=>'Update Usuario', 'url'=>array('update', 'id'=>$model->idUsuario)),
+	array('label'=>'Modificar Usuario', 'url'=>array('update', 'id'=>$model->idUsuario)),
 );
 ?>
 <div class="content">
 	<div class="row-fluid">
     	<div class="span2">&nbsp;</div>
 		<div class="span8">
-			<legend><h1>View Usuario #<?php echo $model->idUsuario; ?></h1></legend>
+			<legend><h1>Usuario Nro: <?php echo $model->idUsuario; ?></h1></legend>
 
 			<?php $this->widget('zii.widgets.CDetailView', array(
 				'data'=>$model,

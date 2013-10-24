@@ -8,14 +8,14 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Destinatario', 'url'=>array('index')),
+	array('label'=>'Listar Destinatario', 'url'=>array('index')),
 	array('label'=>'/'),
-	array('label'=>'Update Destinatario', 'url'=>array('update', 'id'=>$model->iddestinatario)),
+	array('label'=>'Modificar Destinatario', 'url'=>array('update', 'id'=>$model->iddestinatario)),
 );
 ?>
 <div class="span3">&nbsp;</div>
 <div class="span7">
-<h1>View Destinatario #<?php echo $model->iddestinatario; ?></h1>
+<h1>Destinatario Nro: <?php echo $model->iddestinatario; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

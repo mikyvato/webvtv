@@ -7,8 +7,9 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Documentacion de Facturas y Envios',
+	'name'=>'Envios y Facturas ',
 	'theme'=>'bootstrap',
+	'language'=>'es',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -18,6 +19,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 		'application.controllers.*',
+		'ext.EExcelView.*',
 	),
 
 	'modules'=>array(

@@ -8,17 +8,14 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	//array('label'=>'List Factura', 'url'=>array('index')),
-	array('label'=>'Create Factura', 'url'=>array('create')),
+	array('label'=>'Crear Factura', 'url'=>array('create')),
 	array('label'=>'/'),
-	//array('label'=>'Update Factura', 'url'=>array('update', 'id'=>$model->idfactura)),
-	//array('label'=>'Delete Factura', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->idfactura),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Manage Factura', 'url'=>array('admin')),
+	array('label'=>'Administrar Factura', 'url'=>array('admin')),
 );
 ?>
 <div class="span3">&nbsp;</div>
 <div class="span7">
-<h1>View Factura #<?php echo $model->idfactura; ?></h1>
+<h1>Factura Nro: <?php echo $model->idfactura; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

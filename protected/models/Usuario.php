@@ -110,9 +110,10 @@ class Usuario extends CActiveRecord
 	}
 
 	//FUNCION PARA LISTAR EL COMBO
-    public static function getList()
+    public static function getListUsuario()
     {
-        return CHtml::listData(Usuarios::model()->findAll(),'id_usuario', 'username');
+        return CHtml::listData(Usuario::model()->findAll(),'idUsuario', 'apellido');
+        //return CHtml::listData(Proveedor::model()->findAll('estado=1'),'idproveedor','nombre');
     }
 
 

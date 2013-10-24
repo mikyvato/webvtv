@@ -9,15 +9,15 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Usuario', 'url'=>array('index')),
+	array('label'=>'Listar Usuario', 'url'=>array('index')),
 	array('label'=>'/'),
-	array('label'=>'Manage Usuario', 'url'=>array('admin')),
+	array('label'=>'Administrar Usuario', 'url'=>array('admin')),
 );
 ?>
 
 <div class="span3">&nbsp;</div>
 <div class="span7">
-<h1>Update Usuario <?php echo $model->idUsuario; ?></h1>
+<h1>Modificar Usuario <?php echo $model->idUsuario; ?></h1>
 
 <?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
 </div>

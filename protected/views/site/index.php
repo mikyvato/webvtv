@@ -5,25 +5,33 @@
     <div class="span8">
 
     <div class="well">
-
-          <i style="font-size: 200px" class="icon-ok-circle icon-4x"></i>
-          <h2><?php echo CHtml::encode(Yii::app()->name); ?></h2>
+      <div class="row-fluid">
+        <div class="span2">
+          <img height="40" width="100" src="<?php echo Yii::app()->theme->baseUrl; ?>/img/index.jpg" class="img-circle">
+        </div>
+        <div class="span10">
+          <p class="text-center">
+            <h1 align="center">Verificaci&oacute;n T&eacute;cnica Vehicular</h1>
+            <h2 align="center"><?php echo CHtml::encode(Yii::app()->name); ?></h2>
+          </p>
+        </div>
+      </div>
 
     <div class="row-fluid">
             <div class="span4" style="text-align:center;">
-              <div style="font-size: 40px;margin:20px 0 20px 0;"><i class="icon-shopping-cart"></i></div>
+              <div><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/gest_doc.png" class="img-polaroid"></div>
               <h3>1. Gestion</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, sit voluptates  ad quos!.</p>
+              <!--p>Gesti&oacute;n de documentos, facturas y env&iacute;os. </p-->
           </div>
             <div class="span4" style="text-align:center;">
-              <div style="font-size: 40px;margin:20px 0 20px 0;"><i class="icon-credit-card"></i></div>
+              <div><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/consulta.jpg" class="img-polaroid"></div>
               <h3>2. Consulta</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, sit voluptates  ad quos!.</p>
+              <!--p>Maximice su tiempo, realizando consultas r&aacute;pidas y eficientes.</p-->
           </div>
             <div class="span4" style="text-align:center;">
-              <div style="font-size: 40px;margin:20px 0 20px 0;"><i class="icon-phone"></i></div>
+              <div><img src="<?php echo Yii::app()->theme->baseUrl; ?>/img/administracion.jpg" class="img-polaroid"></div>
               <h3>3. Administración</h3>
-              <p>Lorem ipsum adipisicing elit. Quae, sit voluptates  ad quos!.</p>
+              <!--p>R&aacute;pida, a un click de didstancia. Control administrativo simple</p-->
           </div>
       </div>
     </div>
@@ -86,30 +94,3 @@
 </div>
 </section>
 
-
-<section class="inverse-bg">
-<div class="container">
-  <div class="row-fluid">
-    <div class="span4">
-      <h4><a href="#contribute">Contribute Icons</a></h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodt non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </div>
-    <div class="span4">
-      <h4><a href="#" target="_blank">Help me buy an iMac</a></h4>
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo.
-      </p>
-    </div>
-    <div class="span4">
-      <h4><a href="#" target="_blank">My Amazon Wish List</a></h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-    </div>
-  </div>
-</div>
-</section>

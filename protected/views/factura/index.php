@@ -7,9 +7,9 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Factura', 'url'=>array('create')),
+	array('label'=>'Crear Factura', 'url'=>array('create')),
 	array('label'=>'/'),
-	array('label'=>'Manage Factura', 'url'=>array('admin')),
+	array('label'=>'Administrar Factura', 'url'=>array('admin')),
 );
 ?>
 <div class="span2">&nbsp;</div>

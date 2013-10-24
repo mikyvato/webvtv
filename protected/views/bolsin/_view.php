@@ -7,13 +7,16 @@ if ($data->estado == 1){
 if ($data->estado == 2){
 	$alert = 'success';
 }
+if ($data->estado == 0){
+	$alert = 'warning';
+}
 ?>
 
 <div class="well well-small">
 	<div class="container">
 		<div class="row-fluid">
 			
-				<div class="span4">
+				<div class="span5">
 				<b><?php echo CHtml::encode($data->getAttributeLabel('idbolsin')); ?>:</b>
 				<?php echo CHtml::link(CHtml::encode($data->idbolsin), array('view', 'id'=>$data->idbolsin)); ?>
 				<br />
@@ -24,9 +27,10 @@ if ($data->estado == 2){
 
 				<b><?php echo CHtml::encode($data->getAttributeLabel('observacion')); ?>:</b>
 				<?php echo CHtml::encode($data->observacion); ?>
-				</div>
+				<br />
+				<!--/div>
 
-				<div class="span3">
+				<div class="span3"-->
 				<b><?php echo CHtml::encode($data->getAttributeLabel('usuario_idUsuario')); ?>:</b>
 				<?php echo CHtml::encode(Usuario::getUserName($data->usuario_idUsuario)); ?>
 				<br />

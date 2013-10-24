@@ -10,46 +10,54 @@
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
+<div class="content well">
+	<div class="row-fluid">
+	    <div class="span4">
 
-	<div class="row">
-		<?php echo $form->label($model,'idfactura'); ?>
-		<?php echo $form->textField($model,'idfactura'); ?>
+			<div class="">
+				<?php echo "Desde: "; 
+				//echo $form->textField($model,'fecha',array('size'=>60,'maxlength'=>80)); 
+				$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+					//'model'=>$model, 
+					'name'=>'desde',
+					'language'=> 'es', 
+					'options'=> array(
+						'dateFormat'=>'dd-mm-yy',
+						'changeMonth'=> true,
+						'changeYear'=> true,
+						'constrainInput' => 'false', 
+						'duration'=>'fast', 
+						'showAnim'=>'slide',
+						),
+					)
+				); ?>
+			</div>
+
+		</div>
+		<div class="span1">&nbsp;</div>
+		<div class="span4">
+			<div class="">
+				<?php echo "Hasta: ";
+				$this->widget('zii.widgets.jui.CJuiDatePicker', array(
+					//'model'=>$model, 
+					'name'=>'hasta', 
+					'language'=> 'es', 
+					'options'=> array(
+						'dateFormat'=>'dd-mm-yy',
+						'changeMonth'=> true,
+						'changeYear'=> true,
+						'constrainInput' => 'false', 
+						'duration'=>'fast', 
+						'showAnim'=>'slide',
+						),
+					)
+				); ?>
+			
+				<?php echo CHtml::submitButton('Search',array("class"=>"btn-primary")); ?>
+			</div>
+		</div>
 	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'numero'); ?>
-		<?php echo $form->textField($model,'numero',array('size'=>60,'maxlength'=>80)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'fecha'); ?>
-		<?php echo $form->textField($model,'fecha'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'monto'); ?>
-		<?php echo $form->textField($model,'monto',array('size'=>12,'maxlength'=>12)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'observacion'); ?>
-		<?php echo $form->textField($model,'observacion',array('size'=>60,'maxlength'=>200)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'estado'); ?>
-		<?php echo $form->textField($model,'estado'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model,'proveedor_idproveedor'); ?>
-		<?php echo $form->textField($model,'proveedor_idproveedor'); ?>
-	</div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Search'); ?>
-	</div>
-
+</div>
 <?php $this->endWidget(); ?>
 
 </div><!-- search-form -->

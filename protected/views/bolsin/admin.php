@@ -4,61 +4,71 @@
 
 $this->breadcrumbs=array(
 	'Bolsins'=>array('index'),
-	'Manage',
+	'Administrar',
 );
 
 $this->menu=array(
-	array('label'=>'List Bolsin', 'url'=>array('index')),
+	array('label'=>'Listar Bolsin', 'url'=>array('index')),
 	array('label'=>'/'),
-	array('label'=>'Create Bolsin', 'url'=>array('create')),
+	array('label'=>'Crear Bolsin', 'url'=>array('create')),
 );
 
-Yii::app()->clientScript->registerScript('search', "
-$('.search-button').click(function(){
-	$('.search-form').toggle();
-	return false;
-});
-$('.search-form form').submit(function(){
-	$('#bolsin-grid').yiiGridView('update', {
-		data: $(this).serialize()
-	});
-	return false;
-});
-");
 ?>
+
+<script>
+    function mostrarDetalles(){
+        var idbolsin = $.fn.yiiGridView.getSelection('bolsin');
+        var parametro = { 'idbolsin' : idbolsin};  
+        $.ajax({
+  			type: "POST",
+  			url: jQuery(this).attr('href'),
+  			data: parametro ,
+  			success:  function (response) {
+                        $("#fields").html(response);
+                }
+		});
+    }
+</script>
+
 <div class="span2">&nbsp;</div>
 <div class="span8">
-<h1>Manage Bolsins</h1>
+<h1>Administrar Bolsines</h1>
 
-<p>
-You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>
-or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
+<?php
+	echo "<div class='pull-right'>";
+	if(isset($_GET['Bolsin'])){
+		$Bolsin=$_GET['Bolsin'];
+		echo CHtml::link('Exportar',"#", array("submit"=>array('bolsin/exportEx', 'Bolsin'=>$Bolsin), 'confirm' => 'Se exportarán los datos, Continuar?', 'class'=>'btn btn-success'));
+	}
+	else
+		echo CHtml::link('Exportar',"#", array("submit"=>array('bolsin/exportEx'), 'confirm' => 'Se exportarán los datos, Continuar?', 'class'=>'btn btn-success'));
+	echo "</div><br>";
 
-<?php echo CHtml::link('Advanced Search','#',array('class'=>'search-button')); ?>
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
-
-<?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id'=>'bolsin-grid',
-	'dataProvider'=>$model->search(),
-	'filter'=>$model,
+$this->widget('zii.widgets.grid.CGridView', array(
+	'id'=>'bolsin',
+	'selectableRows'=>1,
+	'selectionChanged'=>'mostrarDetalles',
+	'dataProvider'=>$dataProvider2->search(),
+	'enableSorting' => true,
+    'ajaxUpdate'=>false,
+	'filter'=>$dataProvider2,
+	'rowHtmlOptionsExpression' => 'array("id"=>"bolsin")',
 	'columns'=>array(
 		'idbolsin',
 		array(
 			'header'=>'Fecha',
 			'name'=>'fecha',
-			'value'=>'Factura::dateUpdate($data->fecha,2)',
+			'value'=>'Yii::app()->dateFormatter->format("dd/MM/y", strtotime($data->fecha))',
 			),
 		'observacion',
 		array(
 			'name'=>'usuario_idUsuario',
 			'header'=>'Usuario Responsable',
 			'value'=>'Usuario::getUserName($data->usuario_idUsuario)',
+			'filter'=>Usuario::getListUsuario(),
 			),
+		
+
 		array(
                 'name'=>'estado',
                 'header'=>'Estado',
@@ -67,7 +77,19 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
                 ),
 		array(
 			'class'=>'CButtonColumn',
+			'header'=>'Acciones',
+			'template'=>' {update}  {view}',
 		),
-	),
-)); ?>
+	)
+)); 
+?>
+</div>
+<div class="span12">
+	<div class="span2">&nbsp;</div>
+	<div class="span8 well well-small" id="fields">
+	    <?php 
+	   /* if (isset($det) && isset($fac))
+	    	echo $this->renderPartial('_listDetalle', array('detalle'=>$det, 'fac'=>$fac)); */
+	    ?>
+	</div>
 </div>

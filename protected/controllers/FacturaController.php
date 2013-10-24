@@ -71,6 +71,7 @@ class FacturaController extends Controller
 		{
 			$model->attributes=$_POST['Factura'];
 			$model->fecha = Factura::dateUpdate($model->fecha,1);
+			$model->estado = 1;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->idfactura));
 		}
@@ -143,8 +144,10 @@ class FacturaController extends Controller
 	{
 		$model=new Factura('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Factura']))
+		if(isset($_GET['Factura'])){
 			$model->attributes=$_GET['Factura'];
+		}
+
 
 		$this->render('admin',array(
 			'model'=>$model,

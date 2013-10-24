@@ -64,12 +64,6 @@
 				<?php echo $form->error($model,'observacion'); ?>
 			</div>
 
-			<div class="">
-				<?php echo $form->labelEx($model,'estado'); ?>
-				<?php echo $form->dropDownList($model,'estado',array('0'=>'Dasactivado','1'=>'Habilitado')); ?>
-				<?php echo $form->error($model,'estado'); ?>
-			</div>
-
 			<div class="buttons">
 				<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array("class"=>"btn-primary btn-large")); ?>
 			</div>

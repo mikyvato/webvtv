@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="en" />
+	<meta name="language" content="es" />
 
 	<!-- bootstrap CSS framework -->
 
@@ -12,12 +12,12 @@
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
-<body>
+<body style="background-color:#E6E6E6;">
 
-<div class="navbar navbar-static-top navbar-inverse">
+<div class="navbar navbar-fixed-top">
 	<div class="navbar-inner" >
 		<div class="container">
-			<a class="brand" href="#"><img border="1" align="center" height="35" width="115" src="img/index.jpg"></a>
+			<!--a class="brand" href="#"><img border="1" align="center" height="10" width="40" src="<?php echo Yii::app()->theme->baseUrl; ?>/img/index.jpg"></a-->
 	      	<a class="brand"><?php echo CHtml::encode(Yii::app()->name); ?></a>
 	      	<div class="nav-collapse collapse pull-right">
 	      		<?php 
@@ -28,11 +28,13 @@
 		$factura=false;
 		$proveedor=false;
 		$documento=false;
+		$home=true;
 		
 		if (yii::app()->user->checkAccess('Operador')){
 			$bolsin=true;
 			$factura=true;
 			$proveedor=true;
+			$home=false;
 			
 		}
 
@@ -43,26 +45,30 @@
 			$factura=true;
 			$proveedor=true;
 			$documento=true;
+			$home=false;
 		}
 
           $this->widget('zii.widgets.CMenu',array(
-          'htmlOptions'=>array("class"=>"nav"),
+          'htmlOptions'=>array('class'=>'nav pull-right'),
+		  'encodeLabel'=>false,
           'items'=>array(
-            array('label'=>'Home', 'url'=>array('/site/index')),
-            array('label'=>'Usuarios', 'url'=>array('/usuario/index'),'visible'=>$usuario),
-            array('label'=>'Bolsin', 'url'=>array('/bolsin/index'),'visible'=>$bolsin),
-            array('label'=>'Destinatarios', 'url'=>array('/destinatario/index'),'visible'=>$destinatario),
-            array('label'=>'Facturas', 'url'=>array('/factura/index'),'visible'=>$factura),
-            array('label'=>'Proveedores', 'url'=>array('/proveedor/index'),'visible'=>$proveedor),
-            array('label'=>'Documentos', 'url'=>array('/documento/index'),'visible'=>$documento),
-            array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-            array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+            array('label'=>'<i class="icon-home"></i> Home', 'url'=>array('/site/index'),'visible'=>$home),
+            array('label'=>'<i class="icon-user"></i> Usuarios', 'url'=>array('/usuario/index'),'visible'=>$usuario),
+            array('label'=>'<i class="icon-envelope"></i> Bolsin', 'url'=>array('/bolsin/index'),'visible'=>$bolsin),
+            array('label'=>'<i class="icon-list-alt"></i> Facturas', 'url'=>array('/factura/index'),'visible'=>$factura),
+            array('label'=>'<i class="icon-share"></i> Destinatarios', 'url'=>array('/destinatario/index'),'visible'=>$destinatario),
+            array('label'=>'<i class="icon-shopping-cart"></i> Proveedores', 'url'=>array('/proveedor/index'),'visible'=>$proveedor),
+            array('label'=>'<i class="icon-folder-open"></i> Documentos', 'url'=>array('/documento/index'),'visible'=>$documento),
+            array('label'=>'<i class="icon-hand-right"></i> Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+            array('label'=>'<i class="icon-off"></i> Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
           ),
         )); ?>
 	      	</div> 		
 		</div>
 	</div>
-<div class="row-fluid" style="background-color:#82e222">&nbsp;</div>
+</div>
+<br><br>
+<div class="row-fluid" style="background-color:#82e222;height:8px">&nbsp;</div>
 	<div class="row-fluid">
 		<div class="span12">
 			<?php 
@@ -77,7 +83,8 @@
 	
 	<?php echo $content; ?>
 	
-
+	<br>
+	<br>
 	<footer class="span12" >
 		<div class="row-fluid well">
 		    <div class="span3">&nbsp;</div>

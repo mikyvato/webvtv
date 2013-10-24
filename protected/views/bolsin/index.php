@@ -8,25 +8,37 @@ $this->breadcrumbs=array(
 ?>
 <div class="span2">&nbsp;</div>
 <div class="span8">
-<h1>Bolsines</h1>
+	<h1>Bolsines</h1>
 
 <?php 
 
 $this->menu=array(
-	array('label'=>'Create Bolsin', 'url'=>array('create')),
+	array('label'=>'Crear Bolsin', 'url'=>array('create')),
 	array('label'=>'/'),
-	array('label'=>'Manage Bolsin', 'url'=>array('admin')),
+	array('label'=>'Administrar Bolsin', 'url'=>array('admin')),
 );
 ?>
 
-
-<div class="span11">
+<div class="span12">
+<div class="span6">
 
 <?php
 $this->widget('zii.widgets.CListView', array(
 	'htmlOptions'=>array('class'=>'dropdown'),
-	'dataProvider'=>$dataProvider,
+	'dataProvider'=>$enviado,
 	'itemView'=>'_view',
 )); ?>
 </div>
+
+<div class="span6">
+
+<?php
+$this->widget('zii.widgets.CListView', array(
+	'htmlOptions'=>array('class'=>'dropdown'),
+	'dataProvider'=>$activo,
+	'itemView'=>'_view',
+)); ?>
+</div>
+</div>
+
 </div>

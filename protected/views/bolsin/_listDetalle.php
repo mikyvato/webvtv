@@ -51,6 +51,7 @@
 		    <th>Fact Tipo</th>
 		    <th>Fecha</th>
 		    <th>Monto</th>
+		    <th>Proveedor</th>
 		    <th>Observaci&oacute;n</th>
 		    <th>Acci&oacute;n</th>
 		</tr>
@@ -64,8 +65,9 @@
 				<tr class="success">
 					<td> <?php echo $factura->facturaIdfactura->numero; ?> </td>
 					<td> <?php echo $factura->facturaIdfactura->tipo;?> </td>
-					<td> <?php echo $factura->facturaIdfactura->fecha; ?> </td>
+					<td> <?php echo Factura::dateUpdate($factura->facturaIdfactura->fecha,2); ?> </td>
 					<td> <?php echo '$'.$factura->facturaIdfactura->monto; ?> </td>
+					<td> <?php echo $factura->facturaIdfactura->proveedorIdproveedor->nombre; ?></td>
 					<td> <?php echo $factura->facturaIdfactura->observacion; ?> </td>
 					<td> 
 		            <?php						                
@@ -88,7 +90,7 @@
 		<?php 
 		endforeach; 
 		if ($f==1){ ?>
-			<tr class="error"><td colspan="6"> <p class="text-center">El Bolsin no posee facturas</p> </td></tr>
+			<tr class="error"><td colspan="7"> <p class="text-center">El Bolsin no posee facturas</p> </td></tr>
 		<?php }?>
 	</tbody>
 </table>

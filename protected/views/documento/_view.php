@@ -3,7 +3,7 @@
 /* @var $data Documento */
 ?>
 
-<div class="well well-small">
+<div class="well well-small span3">
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('iddocumento')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->iddocumento), array('view', 'id'=>$data->iddocumento)); ?>

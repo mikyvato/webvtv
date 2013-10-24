@@ -70,6 +70,7 @@ class Bolsin extends CActiveRecord
 		return array(
 			'usuarioIdUsuario' => array(self::BELONGS_TO, 'Usuario', 'usuario_idUsuario'),
 			'detalleBolsins' => array(self::HAS_MANY, 'DetalleBolsin', 'bolsin_idbolsin'),
+			'facturaBolsin' => array(self::HAS_MANY, 'Factura', 'bolsin_idbolsin'),
 		);
 	}
 

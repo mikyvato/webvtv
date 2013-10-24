@@ -7,16 +7,16 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Proveedor', 'url'=>array('create')),
+	array('label'=>'Crear Proveedor', 'url'=>array('create')),
 	array('label'=>'/'),
-	array('label'=>'Manage Proveedor', 'url'=>array('admin')),
+	array('label'=>'Administrar Proveedores', 'url'=>array('admin')),
 );
 ?>
 
 <div class="span2">&nbsp;</div>
 <div class="span8">
 
-<h1>Proveedors</h1>
+<h1>Proveedores</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,

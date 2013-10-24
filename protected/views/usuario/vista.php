@@ -1,4 +1,4 @@
-<h1>View Usuario #<?php echo $model->idUsuario; ?></h1>
+<h1>Usuario Nro: <?php echo $model->idUsuario; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,

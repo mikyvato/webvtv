@@ -89,14 +89,14 @@ class Factura extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('numero, fecha, proveedor_idproveedor', 'required'),
-			array('estado, proveedor_idproveedor', 'numerical', 'integerOnly'=>true),
+			array('estado, proveedor_idproveedor, bolsin_idbolsin','numerical', 'integerOnly'=>true),
 			array('tipo', 'length', 'max'=>1),
 			array('numero', 'length', 'max'=>80),
 			array('monto', 'length', 'max'=>12),
 			array('observacion', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('idfactura, numero, fecha, monto, observacion, estado, proveedor_idproveedor', 'safe', 'on'=>'search'),
+			array('idfactura, numero, fecha, monto, observacion, estado, proveedor_idproveedor, bolsin_idbolsin', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -110,6 +110,7 @@ class Factura extends CActiveRecord
 		return array(
 			'detalleBolsins' => array(self::HAS_MANY, 'DetalleBolsin', 'factura_idfactura'),
 			'proveedorIdproveedor' => array(self::BELONGS_TO, 'Proveedor', 'proveedor_idproveedor'),
+			'bolsinIdbolsin' => array(self::BELONGS_TO, 'Bolsin', 'bolsin_idbolsin'),
 		);
 	}
 
@@ -127,6 +128,7 @@ class Factura extends CActiveRecord
 			'observacion' => 'Observacion',
 			'estado' => 'Estado',
 			'proveedor_idproveedor' => 'Proveedor Idproveedor',
+			'bolsin_idbolsin' => 'Bolsin Nro'
 		);
 	}
 
@@ -149,6 +151,7 @@ class Factura extends CActiveRecord
 		$criteria->compare('observacion',$this->observacion,true);
 		$criteria->compare('estado',$this->estado);
 		$criteria->compare('proveedor_idproveedor',$this->proveedor_idproveedor);
+		$criteria->compare('bolsin_idbolsin',$this->bolsin_idbolsin);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

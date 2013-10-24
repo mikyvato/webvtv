@@ -8,10 +8,20 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Bolsin', 'url'=>array('create')),
+	array('label'=>'Crear Bolsin', 'url'=>array('create')),
 	array('label'=>'/'),
-	array('label'=>'Manage Bolsin', 'url'=>array('admin')),
+	array('label'=>'Administar Bolsin', 'url'=>array('admin')),
 );
+
+if ($model->estado == 1){
+	$alert = 'info';
+}
+if ($model->estado == 2){
+	$alert = 'success';
+}
+if ($model->estado == 0){
+	$alert = 'warning';
+}
 ?>
 <div class="span12">
 	<div class="span2">&nbsp;</div>
@@ -19,26 +29,41 @@ $this->menu=array(
 		<div class="span12">
 			<legend>
 				<div class="span8">
-					<h3> Bolsin Nro: <?php echo $model->idbolsin; ?> </h3>
+					<h3> Bolsin Nro: <?php echo $model->idbolsin; ?> </h3>  
 				</div>
 				<div class="span3">
-					<p class="text-right"> <?php echo Factura::dateUpdate($model->fecha,2); ?></p>
+					<p class="text-right"> <?php echo Yii::app()->dateFormatter->format("dd/MM/y", strtotime($model->fecha)); ?></p>
 				</div>
 			</legend>
 		</div>
 
-		<div class="span11 well well-small">
-		<div class="span8">
-			<span class="label label-success"> <i class="icon-hand-right"></i> Observaci&oacute;n</span> 
+		<div class="span11">
+		<div class="span7 well well-small">
+			<span class="label label-success"> <i class="icon-hand-right"></i> Observaci&oacute;n </span> <span class="label label-<?php echo $alert; ?>"><?php echo Bolsin::getEstado($model->estado); ?> </span> 
 			<p class="muted">
 				<small><?php echo $model->observacion; ?></small>
 			</p>
 		</div>
-		<div class="span3">
+		<div class="span5">
 			<p class="text-right">
-		    <?php echo CHtml::link('Enviar', array('bolsin/estado','id'=>$model->idbolsin, 'estado'=>'1'), array('class'=>'btn btn-success')); ?>
-		    <br>
-		    <?php echo CHtml::link('Anular', array('bolsin/estado','id'=>$model->idbolsin, 'estado'=>'0'), array('class'=>'btn btn-danger')); ?>
+		    <?php 
+		    	if ($model->estado == 2){
+		    		echo CHtml::link('<i class="icon-share-alt icon-white"></i> Enviar', array('bolsin/estado','id'=>$model->idbolsin, 'estado'=>'1'), array('class'=>'btn btn-success','title'=>'Enviar Bolsin')); 
+		    	}
+		    	else if ($model->estado == 0)
+		    		echo CHtml::link('<i class="icon-ok icon-white"></i> Activar', array('bolsin/estado','id'=>$model->idbolsin, 'estado'=>'2'), array('class'=>'btn btn-primary','title'=>'Activar Bolsin')); 
+			?>
+			&nbsp;
+			<?php
+		    	if (($model->estado == 1) || ($model->estado == 2)){
+		    		echo CHtml::link('<i class="icon-remove icon-white"></i> Anular', array('bolsin/estado','id'=>$model->idbolsin, 'estado'=>'0'), array('class'=>'btn btn-danger','title'=>'Anular Bolsin')); 
+		    	}
+		    	?> 
+		    	&nbsp;
+		    	<?php echo CHtml::link('<i class="icon-share icon-white"></i> Exportar', array('bolsin/export','id'=>$model->idbolsin, 'estado'=>'1'), array('class'=>'btn btn-success','title'=>'Exportar Excel')); ?>
+		    </p>
+		    <p class="text-right">
+		    	<?php echo CHtml::link('<i class="icon-print"></i> Imprimir', array('bolsin/print','id'=>$model->idbolsin, 'estado'=>'1'), array('class'=>'btn','title'=>'Imprimir','target'=>'_blank')); ?>
 		    </p>
 		</div>
 		</div>
@@ -72,13 +97,14 @@ $this->menu=array(
    			echo $form->error($detForm,"observacion"); 
 
 			echo $form->hiddenField($detForm,'bolsin_idbolsin',array('value'=>$model->idbolsin)); 
-
-			echo CHtml::submitButton("Agregar",array("class"=>"btn btn-primary"));
+			if ($model->estado == 2){
+				echo CHtml::submitButton("Agregar",array("class"=>"btn btn-primary"));
+			}
 
 			$this->endWidget(); 
 		?>
 	</div>
-	<div class="span8" id="fields">
+	<div class="span8 well" id="fields">
 	    <?php echo $this->renderPartial('_listDetalle', array('detalle'=>$det, 'fac'=>$fac)); ?>
 	</div>
 </div>
@@ -98,43 +124,5 @@ $('.docid').change(function(){
 ");
 
 
-/*
- * The followings are the available columns in table 'detalleBolsin':
- * @property integer $iddetalleBolsin
- * @property integer $bolsin_idbolsin
- * @property integer $destinatario_iddestinatario
- * @property integer $documento_iddocumento
- * @property integer $factura_idfactura
- * @property string $observacion
- *
- * The followings are the available model relations:
- * @property Bolsin $bolsinIdbolsin
- * @property Destinatario $destinatarioIddestinatario
- * @property Documento $documentoIddocumento
- * @property Factura $facturaIdfactura
- */
-
-
-/*
-$this->widget('zii.widgets.CDetailView', array(
-	'data'=>$model,
-	'attributes'=>array(
-		'idbolsin',
-		array(
-			'label'=>'Fecha',
-			'value'=>Factura::dateUpdate($model->fecha,2),
-			),
-
-		'observacion',
-		array(
-			'label'=>'Usuario Responsable',
-			'value'=>Usuario::getUserName($model->usuario_idUsuario),
-			),
-		array(
-			'label'=>'Estado',
-			'value'=>Bolsin::getEstado($model->estado),
-			),
-	),
-)); */
 ?>
 
